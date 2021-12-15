@@ -1,0 +1,50 @@
+.pageNumber {
+    background-color: #fff;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.selectedPage {
+    background-color: #1890ff;
+    color: #ebe9ef;
+}
+
+.item {
+    margin-top: 15px;
+}
+
+.pagination {
+    display: inline;
+}
+
+.setBtn {
+    letter-spacing: 1px;
+    margin-right: 11px;
+    cursor: pointer;
+    width: 398px;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn {
+    border: 2px solid #1890ff;
+    background-color: unset;
+    color: #1890ff;
+    width: 16%;
+}
+
+.btnSpace1 {
+    margin-right: 10px;
+}
+
+.btnSpace2 {
+    margin-left: 10px;
+}

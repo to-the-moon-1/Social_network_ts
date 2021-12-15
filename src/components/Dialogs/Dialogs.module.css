@@ -1,0 +1,90 @@
+.mainContent {
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 45px 55px;
+    border-radius: 3px;
+    margin-bottom: 17px;
+    height: 840px;
+}
+
+.dialogsItems a {
+    text-decoration: unset;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 18px;
+    font-weight: 700;
+    opacity: .7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.activeDialog {
+    color: #1890ff !important;
+    opacity: 1;
+}
+
+.dialog {
+    background-color: #fff;
+    border-radius: 3px;
+    margin-right: 32px;
+    margin-bottom: 17px;
+    padding: 20px 25px;
+}
+
+.dialogData {
+    padding-left: 10px;
+}
+
+.messageText {
+    width: 100%;
+    word-break: break-all;
+    line-height: 25px;
+    margin-top: 3px;
+    font-size: 15px;
+}
+
+.message {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f0f2f5;
+}
+
+.dialogImg {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.textarea {
+    width: 100%;
+    min-height: 127px;
+    max-height: 127px;
+    border-radius: 3px;
+    border: 1px solid #d3d4d7;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+.setBtn {
+    letter-spacing: 1px;
+    margin-right: 11px;
+    cursor: pointer;
+    width: 398px;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mainBtn {
+    border: 1px solid #1890ff;
+    color: #ebe9ef;
+    background-color: #1890ff;
+    width: 400px;
+}

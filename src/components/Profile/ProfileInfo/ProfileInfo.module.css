@@ -1,0 +1,171 @@
+.mainContent {
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 45px 55px;
+    border-radius: 5px;
+    margin-bottom: 17px;
+}
+
+.infoContent {
+    padding-left: 15px;
+}
+
+.mainImg {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.icon {
+    text-align: center;
+    font-size: 200px;
+    padding-top: 90px;
+    font-weight: 300;
+}
+
+.newPhotoBtn {
+    width: 400px;
+    position: relative;
+    top: -26px;
+    left: 7px;
+    opacity: 0;
+}
+
+.setBtn {
+    letter-spacing: 1px;
+    cursor: pointer;
+    width: 398px;
+    height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: auto 0;
+}
+
+.mainBtn {
+    border: 1px solid #1890ff;
+    color: #ebe9ef;
+    background-color: #1890ff;
+    width: 400px;
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 5px;
+}
+
+.btn {
+    border: 2px solid #1890ff;
+    background-color: unset;
+    color: #1890ff;
+    width: 400px;
+    margin-top: 12px;
+}
+
+.outBtn {
+    padding-bottom: 15px
+}
+
+/*.name {*/
+/*    color: #494450;*/
+/*    font-size: 32px;*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 5px;*/
+/*    letter-spacing: 2px;*/
+/*}*/
+
+.name {
+    margin-top: 0;
+    margin-bottom: 17px;
+    line-height: 35px;
+    font-size: 35px;
+    font-weight: 600;
+    opacity: .7;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.status {
+    color: #1890ff;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.inputStatus {
+    letter-spacing: 1px;
+    font-size: 22px;
+    border: none;
+    width: 415px;
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+.textarea {
+    width: 100%;
+    min-height: 127px;
+    max-height: 127px;
+    border-radius: 3px;
+    border: 1px solid #d3d4d7;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+.input {
+    border-radius: 3px;
+    border: 1px solid #d3d4d7;
+    font-size: 16px;
+    padding: 8px 15px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.checkbox {
+    margin-top: 6px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #d3d4d7;
+    float: right;
+    position: relative;
+    top: -29px;
+    left: -335px;
+}
+
+.description {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.headDesc {
+    line-height: 18px;
+    font-weight: 700;
+    opacity: .7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.otherInfo {
+    margin-top: 27px;
+}
+
+.contacts {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.contactItem {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.formSummaryError {
+    border: 1px solid red;
+    padding: 5px;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

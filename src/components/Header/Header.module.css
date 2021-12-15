@@ -1,0 +1,40 @@
+.header {
+    grid-area: h;
+    background-color: #494450;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.menuImg {
+    margin-top: 10px;
+    opacity: 0.95;
+}
+
+.loginBlock {
+    float: right;
+    color: #ebe9ef;
+    margin-top: -3px;
+}
+
+.item,.btnLogout {
+    color: #ebe9ef;
+    text-decoration: unset;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btnLogout {
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}
+
+.avatar {
+    margin-right: 10px;
+}
+
+/*.line {*/
+/*    color: #1890ff;*/
+/*}*/
