@@ -28,7 +28,7 @@ const Chat: React.FC = () => {
         return () => {
             dispatch(stopMessagesListening())
         }
-    }, [])
+    }, [dispatch])
 
     return <>
     {status === 'error' && <div>Some error occured<br />Please, refresh the page</div>}
@@ -57,11 +57,11 @@ const Messages: React.FC = () => {
         if(isAutoScroll) {
             messagesAnchorRef.current?.scrollIntoView({behavior: 'smooth'})
         }
-    }, [messages])
+    }, [messages, isAutoScroll])
 
     return <div className={classes.allMessages} style={{height: '570px', overflowY: 'auto'}} onScroll={scrollHandler}>
         {messages.map((m) => <Message key={m.id} message={m} />)}
-        <div ref={messagesAnchorRef}></div>
+        <div ref={messagesAnchorRef}/>
     </div>
 }
 

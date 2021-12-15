@@ -26,7 +26,7 @@ type PropsType = {
 
 type QueryParamsType = {term?: string, page?: string, friend?: string};
 
-let Users: React.FC<PropsType> = (props) => {
+let Users: React.FC<PropsType> = () => {
     // const totalUsersCount = useSelector(getTotalUsersCount);
     const pageSize = useSelector(getPageSize);
     const currentPage = useSelector(getCurrentPage);
@@ -56,10 +56,10 @@ let Users: React.FC<PropsType> = (props) => {
             case 'false':
                 actualFilter = {...actualFilter, friend: false}
                 break;
-        };
+        }
 
         dispatch(getUsers(actualPage, pageSize, actualFilter));
-    }, []);
+    }, [currentPage, dispatch, filter, history.location.search, pageSize]);
 
     useEffect(() => {
         const query: QueryParamsType = {};
@@ -71,7 +71,7 @@ let Users: React.FC<PropsType> = (props) => {
             pathname: '/users',
             search: queryString.stringify(query),
         })
-    }, [filter, currentPage]);
+    }, [filter, currentPage, history]);
 
     const onPageChanged = (pageNumber: number) => {
         dispatch(getUsers(pageNumber, pageSize, filter));
