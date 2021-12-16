@@ -1,11 +1,14 @@
 import React, {ChangeEvent, useState} from 'react';
-import classes from './ProfileInfo.module.css'
-import Preloader from "../../common/Preloader/Preloader";
-import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
-import ProfileDataFormReduxForm from "./ProfileDataForm";
-import {ContactsType, ProfileType} from "../../../types/types";
 import {Avatar, Col, Row} from "antd";
 import {UserOutlined} from "@ant-design/icons";
+
+import Preloader from "../../common/Preloader/Preloader";
+import {ContactsType, ProfileType} from "../../../types/types";
+
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import ProfileDataFormReduxForm from "./ProfileDataForm";
+
+import './ProfileInfo.css'
 
 type PropsType = {
     profile: ProfileType | null,
@@ -47,17 +50,13 @@ const ProfileInfo: React.FC<PropsType> = ({profile, status, updateStatus, isOwne
     return <Row>
         <Col span={10}>
             {profile.photos.large != null
-                ? <img className={classes.mainImg} alt={'user'} src={profile.photos.large} />
-                : <Avatar className={classes.mainImg} style={{backgroundColor: '#1890ff'}} icon={<UserOutlined className={classes.icon} />} />}
-            {/*<img alt={''} className={classes.mainImg} src={profile.photos.large || userPhoto} />*/}
-            {/*{isOwner && <button className={[classes.big-btn, classes.main-btn].join(' ')}>New photo<input type={'file'} className={classes.newPhotoBtn} onChange={onMainPhotoSelected} /></button>}*/}
-            {isOwner && <button>New photo<input type={'file'} className={classes.newPhotoBtn} onChange={onMainPhotoSelected} /></button>}
-            {/*{isOwner && !editMode && <button className={[classes.big-btn, classes.btn].join(' ')} onClick={goToEditMode}>Edit profile</button>}*/}
-            {isOwner && !editMode && <button onClick={goToEditMode}>Edit profile</button>}
+                ? <img className="img-profile" alt={'user'} src={profile.photos.large} />
+                : <Avatar className="img-profile" icon={<UserOutlined className="icon icon-profile" />} />}
+            {isOwner && <button className="big-btn main-btn">New photo<input type={'file'} className="set-photo-btn" onChange={onMainPhotoSelected} /></button>}
+            {isOwner && !editMode && <button className="big-btn btn" onClick={goToEditMode}>Edit profile</button>}
         </Col>
-        <Col span={14} className={classes.infoContent}>
-            <div className={classes.name}>{profile.fullName}</div>
-            {/*<div className={classes.name}>Tony Stark</div>*/}
+        <Col span={14} className="wrapper-profile-info">
+            <div className="name-profile">{profile.fullName}</div>
             <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
             <hr style={{opacity: .5}} />
             {editMode
@@ -74,12 +73,12 @@ type ProfileDataPropsType = {
 }
 
 const ProfileData: React.FC<ProfileDataPropsType> = ({profile, }) => {
-    return <div className={classes.otherInfo}>
-        <div className={classes.description}><b className={classes.headDesc}>About me:</b><br /><span className={classes.contactItem}>&ndash;&nbsp; {profile.aboutMe ? profile.aboutMe : 'no information'}</span></div>
-        <div className={classes.description}><b className={classes.headDesc}>Looking for a job:</b><br /><span className={classes.contactItem}>&ndash;&nbsp; {profile.lookingForAJob ? 'yes' : 'no'}</span></div>
+    return <div className="wrapper-profile-form">
+        <div className="wrapper-field"><b>About me:</b><br /><span className="item-field">&ndash;&nbsp; {profile.aboutMe ? profile.aboutMe : 'no information'}</span></div>
+        <div className="wrapper-field"><b>Looking for a job:</b><br /><span className="item-field">&ndash;&nbsp; {profile.lookingForAJob ? 'yes' : 'no'}</span></div>
         {profile.lookingForAJob &&
-        <div className={classes.description}><b className={classes.headDesc}>My professional skills:</b><br /> {profile.lookingForAJobDescription}</div>}
-        <div className={classes.contacts}><b className={classes.headDesc}>Contacts:</b> {Object.keys(profile.contacts).map((key) => {
+        <div className="wrapper-field"><b>My professional skills:</b><br /><span className="item-field">&ndash;&nbsp; {profile.lookingForAJobDescription}</span></div>}
+        <div className="wrapper-field"><b>Contacts:</b> {Object.keys(profile.contacts).map((key) => {
             return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key as keyof ContactsType]} />
         })}</div>
     </div>
@@ -91,7 +90,7 @@ type ContactPropsType = {
 }
 
 export const Contact: React.FC<ContactPropsType> = ({contactTitle, contactValue}) => {
-    return <div className={classes.contactItem}>&ndash;&nbsp; {contactTitle}: {contactValue === null ? <span>no contact</span> : contactValue === '' ? <span>no contact</span> : contactValue}</div>
+    return <div className="item-field">&ndash;&nbsp; {contactTitle}: {contactValue === null ? <span>no contact</span> : contactValue === '' ? <span>no contact</span> : contactValue}</div>
 }
 
 export default ProfileInfo;

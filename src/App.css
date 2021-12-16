@@ -38,6 +38,11 @@
   /*min-height: 100vh;*/
 }
 
+.icon {
+  text-align: center;
+  font-weight: 300;
+}
+
 .big-btn {
   letter-spacing: 1px;
   margin-right: 11px;
@@ -56,6 +61,7 @@
   color: #ebe9ef;
   background-color: #1890ff;
   cursor: pointer;
+  height: 40px;
   /*width: 100%;*/
 }
 
@@ -78,6 +84,21 @@
   margin-bottom: 5px;
   font-size: 16px;
   padding: 8px 15px;
+}
+
+.checkbox {
+  margin-top: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.form-summary-error {
+  border: 1px solid red;
+  padding: 5px;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 * {

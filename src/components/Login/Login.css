@@ -30,12 +30,8 @@
     margin-top: 10px;
 }
 
-.checkbox {
-    margin-top: 6px;
+.checkbox.checkbox-login {
     margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
 }
 
 .wrapper-checkbox {
@@ -50,12 +46,4 @@
 
 .hr {
     margin-bottom: 15px;
-}
-
-.form-summary-error {
-    border: 1px solid red;
-    padding: 5px;
-    color: red;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }

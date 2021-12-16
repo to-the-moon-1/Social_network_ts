@@ -1,5 +1,4 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
-import classes from './ProfileInfo.module.css';
 
 type PropsType = {
     status: string,
@@ -30,13 +29,13 @@ const ProfileStatusWithHooks: React.FC<PropsType> = (props) => {
 
         return <div>
             {!editMode &&
-            <div className={classes.status}>
+            <div className="status">
                 <span title='Please, double click to change!' onDoubleClick={activateEditMode}>{props.status || 'No status'}</span>
             </div>
             }
             {editMode &&
             <div>
-                <input className={classes.status + ' ' + classes.inputStatus} onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status}/>
+                <input className="status input-status" onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status}/>
             </div>
             }
         </div>

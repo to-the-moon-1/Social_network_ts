@@ -1,4 +1,4 @@
-.item {
+.item-post {
     border: 2px solid #1890ff;
     border-radius: 3px;
     margin-right: 32px;
@@ -6,17 +6,17 @@
     padding: 20px 25px;
 }
 
-.userImg {
+.img-user-post {
     border-radius: 50%;
     width: 60px;
     height: 60px;
 }
 
-.postData {
+.wrapper-post {
     padding-left: 18px;
 }
 
-.wrapPostText {
+.wrapper-text-post {
     width: 100%;
     word-break: break-all;
     line-height: 25px;
@@ -24,7 +24,7 @@
     font-size: 15px;
 }
 
-.name {
+.name-user-post {
     line-height: 18px;
     font-weight: 700;
     opacity: .7;
@@ -47,7 +47,7 @@
     font-size: 14px;
 }
 
-.active {
+.activity-post {
     font-size: 14px;
     margin-top: 30px;
     text-align: right;

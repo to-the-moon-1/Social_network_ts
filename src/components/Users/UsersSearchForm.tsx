@@ -49,7 +49,7 @@ const UsersSearchForm: React.FC<PropsType> = React.memo((props) => {
                         <option value="true">Followed</option>
                         <option value="false">Unfollowed</option>
                     </Field>
-                    <button className="big-btn main-btn" type="submit" disabled={isSubmitting}>
+                    <button className="main-btn big-btn search-btn" type="submit" disabled={isSubmitting}>
                         Search
                     </button>
                 </Form>

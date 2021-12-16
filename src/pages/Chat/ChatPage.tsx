@@ -72,7 +72,7 @@ const Message: React.FC<{message: ChatMessageType}> = React.memo(({message}) => 
         <Row>
             <Col span={1}>
                 {message.photo === null
-                    ?   <Avatar className="img-message" style={{backgroundColor: '#1890ff'}} icon={<UserOutlined className="icon-message" />} />
+                    ?   <Avatar className="img-message" style={{backgroundColor: '#1890ff'}} icon={<UserOutlined className="icon icon-message" />} />
                     :   <img className="img-message" alt={''} src={message.photo} />}
 
             </Col>

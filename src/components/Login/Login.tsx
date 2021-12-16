@@ -23,7 +23,7 @@ const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType, LoginFormOwnPro
                     <Field className='input' placeholder={'Password'} name={'password'} type={'password'} component={Input} validate={[required]} />
                 </div>
                 <div className="wrapper-checkbox">
-                    <Field className="checkbox" type={'checkbox'} name={'rememberMe'} component={Input} /><span className="remember-me"> remember me</span>
+                    <Field className="checkbox checkbox-login" type={'checkbox'} name={'rememberMe'} component={Input} /><span className="remember-me"> remember me</span>
                 </div> <br />
                 {captchaUrl && <img className="img-captcha" src={captchaUrl} alt={''} />}
                 {captchaUrl && <Field className="input-small" placeholder={'Symbols from image'} name={'captcha'} component={Input} validate={[required]} />}

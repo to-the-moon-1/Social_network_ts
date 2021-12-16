@@ -19,14 +19,12 @@ let User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow}) 
                         <NavLink to={'/profile/' + user.id}>
                             {user.photos.small != null
                                 ? <img className="img-user" alt={'user'} src={user.photos.small} />
-                                : <Avatar className="avatar-user" icon={<UserOutlined className="icon-user" />} />}
-                            {/*<img alt={'user'} src={user.photos.small != null ? user.photos.small : userPhoto} />*/}
+                                : <Avatar className="avatar-user" icon={<UserOutlined className="icon icon-user" />} />}
                         </NavLink>
                 </Col>
                     <Col span={18} className="info-user">
                         <span>
                             <div className="name-user">{user.name}</div>
-                            {/*<div>{u.status}</div>*/}
                         </span>
                         <span>
                             <div className="location-user">{'location.country'}</div>

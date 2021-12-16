@@ -1,6 +1,6 @@
 import React from "react";
-import classes from "./ProfileInfo.module.css";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
+
 import {Input, Textarea} from "../../common/FormsControls/FormsControl";
 import {ProfileType} from "../../../types/types";
 
@@ -9,24 +9,23 @@ type PropsType = {
 }
 
 const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> & PropsType> = ({handleSubmit, profile, error}) => {
-    return <form onSubmit={handleSubmit} className={classes.otherInfo}>
-        <div className={classes.description}><b className={classes.headDesc}>About me:</b>
-            <Field className={classes.textarea} component={Textarea} name={'aboutMe'} placeholder={'About me'} />
+    return <form onSubmit={handleSubmit} className="wrapper-profile-form">
+        <div className="wrapper-field"><b>About me:</b>
+            <Field className="textarea textarea-profile" component={Textarea} name={'aboutMe'} placeholder={'About me'} />
         </div>
-        <div className={classes.description}><b className={classes.headDesc}>Looking for a job:</b>
-            <Field className={classes.checkbox} component={Input} type={'checkbox'} name={'lookingForAJob'} placeholder={''} />
+        <div className="wrapper-field"><b>Looking for a job:</b>
+            <Field className="checkbox checkbox-profile" component={Input} type={'checkbox'} name={'lookingForAJob'} placeholder={''} />
         </div>
-        <div className={classes.description}><b className={classes.headDesc}>My professional skills:</b>
-            <Field className={classes.textarea} component={Textarea} name={'lookingForAJobDescription'} placeholder={'Professional skills'} />
+        <div className="wrapper-field"><b>My professional skills:</b>
+            <Field className="textarea textarea-profile" component={Textarea} name={'lookingForAJobDescription'} placeholder={'Professional skills'} />
         </div>
-        <div className={classes.contacts}><b className={classes.headDesc}>Contacts:</b> {Object.keys(profile.contacts).map(key => {
-            return <div key={key} className={classes.contactItem}>&ndash;&nbsp; {key}:<Field className={classes.input} component={Input} name={'contacts.' + key} placeholder={key} /></div>
+        <div className="wrapper-field"><b>Contacts:</b> {Object.keys(profile.contacts).map(key => {
+            return <div key={key} className="item-field">&ndash;&nbsp; {key}:<Field className="input input-profile" component={Input} name={'contacts.' + key} placeholder={key} /></div>
         })}</div>
-        {error && <div className={classes.formSummaryError}>
+        {error && <div className="form-summary-error">
             {error}
         </div>}
-        {/*<button className={[classes.big-btn, classes.main-btn, classes.outBtn].join(' ')}>Save</button>*/}
-        <button>Save</button>
+        <button className="big-btn main-btn save-btn">Save</button>
     </form>
 }
 

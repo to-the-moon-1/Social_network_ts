@@ -1,4 +1,4 @@
-.mainContent {
+.wrapper-profile {
     border: 1px solid #fff;
     background-color: #fff;
     padding: 45px 55px;
@@ -6,24 +6,23 @@
     margin-bottom: 17px;
 }
 
-.infoContent {
+.wrapper-profile-info {
     padding-left: 15px;
 }
 
-.mainImg {
+.img-profile {
     width: 400px;
     height: 400px;
     border-radius: 50%;
+    background-color: #1890ff;
 }
 
-.icon {
-    text-align: center;
+.icon-profile {
     font-size: 200px;
     padding-top: 90px;
-    font-weight: 300;
 }
 
-.newPhotoBtn {
+.set-photo-btn {
     width: 400px;
     position: relative;
     top: -26px;
@@ -31,22 +30,7 @@
     opacity: 0;
 }
 
-/*.big-btn {*/
-/*    letter-spacing: 1px;*/
-/*    cursor: pointer;*/
-/*    width: 398px;*/
-/*    height: 40px;*/
-/*    text-align: center;*/
-/*    border-radius: 3px;*/
-/*    font-size: 16px;*/
-/*    font-weight: 500;*/
-/*    margin: auto 0;*/
-/*}*/
-
 .main-btn {
-    /*border: 1px solid #1890ff;*/
-    /*color: #ebe9ef;*/
-    /*background-color: #1890ff;*/
     width: 400px;
     text-align: center;
     margin-top: 25px;
@@ -61,19 +45,11 @@
     margin-top: 12px;
 }
 
-.outBtn {
+.save-btn {
     padding-bottom: 15px
 }
 
-/*.name {*/
-/*    color: #494450;*/
-/*    font-size: 32px;*/
-/*    font-weight: bold;*/
-/*    margin-bottom: 5px;*/
-/*    letter-spacing: 2px;*/
-/*}*/
-
-.name {
+.name-profile {
     margin-top: 0;
     margin-bottom: 17px;
     line-height: 35px;
@@ -91,7 +67,7 @@
     font-weight: 500;
 }
 
-.inputStatus {
+.input-status {
     letter-spacing: 1px;
     font-size: 22px;
     border: none;
@@ -100,35 +76,17 @@
     padding: 0;
 }
 
-.textarea {
-    width: 100%;
-    min-height: 127px;
-    max-height: 127px;
-    border-radius: 3px;
-    border: 1px solid #d3d4d7;
+.textarea.textarea-profile {
     margin-top: 12px;
-    margin-bottom: 5px;
-    font-size: 16px;
-    padding: 8px 15px;
 }
 
-.input {
-    border-radius: 3px;
+.input.input-profile {
     border: 1px solid #d3d4d7;
-    font-size: 16px;
-    padding: 8px 15px;
-    width: 100%;
-    margin-top: 10px;
     margin-bottom: 5px;
 }
 
-.checkbox {
-    margin-top: 6px;
+.checkbox.checkbox-profile {
     margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-    border: 1px solid #d3d4d7;
     float: right;
     position: relative;
     top: -29px;
@@ -140,32 +98,17 @@
     margin-top: 15px;
 }
 
-.headDesc {
-    line-height: 18px;
-    font-weight: 700;
-    opacity: .7;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.otherInfo {
+.wrapper-profile-form {
     margin-top: 27px;
 }
 
-.contacts {
+.wrapper-field {
     margin-top: 15px;
     font-size: 18px;
 }
 
-.contactItem {
+.item-field {
     font-size: 16px;
     margin-top: 10px;
 }
 
-.formSummaryError {
-    border: 1px solid red;
-    padding: 5px;
-    color: red;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
