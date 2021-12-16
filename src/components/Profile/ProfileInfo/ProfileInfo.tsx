@@ -50,8 +50,10 @@ const ProfileInfo: React.FC<PropsType> = ({profile, status, updateStatus, isOwne
                 ? <img className={classes.mainImg} alt={'user'} src={profile.photos.large} />
                 : <Avatar className={classes.mainImg} style={{backgroundColor: '#1890ff'}} icon={<UserOutlined className={classes.icon} />} />}
             {/*<img alt={''} className={classes.mainImg} src={profile.photos.large || userPhoto} />*/}
-            {isOwner && <button className={[classes.setBtn, classes.mainBtn].join(' ')}>New photo<input type={'file'} className={classes.newPhotoBtn} onChange={onMainPhotoSelected} /></button>}
-            {isOwner && !editMode && <button className={[classes.setBtn, classes.btn].join(' ')} onClick={goToEditMode}>Edit profile</button>}
+            {/*{isOwner && <button className={[classes.big-btn, classes.main-btn].join(' ')}>New photo<input type={'file'} className={classes.newPhotoBtn} onChange={onMainPhotoSelected} /></button>}*/}
+            {isOwner && <button>New photo<input type={'file'} className={classes.newPhotoBtn} onChange={onMainPhotoSelected} /></button>}
+            {/*{isOwner && !editMode && <button className={[classes.big-btn, classes.btn].join(' ')} onClick={goToEditMode}>Edit profile</button>}*/}
+            {isOwner && !editMode && <button onClick={goToEditMode}>Edit profile</button>}
         </Col>
         <Col span={14} className={classes.infoContent}>
             <div className={classes.name}>{profile.fullName}</div>

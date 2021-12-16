@@ -1,4 +1,4 @@
-.pageNumber {
+.page-number {
     background-color: #fff;
     padding: 10px 15px;
     margin: 5px;
@@ -6,9 +6,10 @@
     border: none;
     border-radius: 3px;
     font-weight: 500;
+    cursor: pointer;
 }
 
-.selectedPage {
+.selected-page {
     background-color: #1890ff;
     color: #ebe9ef;
 }
@@ -17,34 +18,21 @@
     margin-top: 15px;
 }
 
-.pagination {
+.item-pagination {
     display: inline;
 }
 
-.setBtn {
-    letter-spacing: 1px;
-    margin-right: 11px;
-    cursor: pointer;
-    width: 398px;
-    height: 40px;
-    text-align: center;
-    margin-top: 10px;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.btn {
+.big-btn.nav-btn {
     border: 2px solid #1890ff;
     background-color: unset;
     color: #1890ff;
-    width: 16%;
+    width: 200px;
 }
 
-.btnSpace1 {
+.prev-btn {
     margin-right: 10px;
 }
 
-.btnSpace2 {
+.next-btn {
     margin-left: 10px;
 }

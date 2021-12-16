@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from './Header.module.css';
 import {Link} from "react-router-dom";
 import {Avatar, Col, Menu, Row} from "antd";
 import {UserOutlined} from "@ant-design/icons";
@@ -7,6 +6,8 @@ import { Header } from 'antd/lib/layout/layout';
 import {useDispatch, useSelector} from "react-redux";
 import {selectIsAuth, selectLogin} from "../../redux/auth-selectors";
 import {logout} from "../../redux/auth-reducer";
+
+import './Header.css';
 
 // export type MapPropsType = {
 //     isAuth: boolean,
@@ -29,36 +30,23 @@ const AppHeader: React.FC = () => {
 
     return <Header className="header">
         <div className="logo" />
-        <Row style={{ padding: '0 150px' }}>
+        <Row className="wrapper-header">
             <Col span={18}>
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                    <img className={classes.menuImg} height={45} alt={''} src='https://www.smeg.com/binaries/content/gallery/logo/logo_bianco_no-back.png' />
+                    <img className="img-header" alt={''} src='https://www.smeg.com/binaries/content/gallery/logo/logo_bianco_no-back.png' />
                 </Menu>
             </Col>
             <Col span={6}>
-                <div className={classes.loginBlock}>
+                <div className="wrapper-login">
                     {isAuth
-                        ? <div className={classes.item}> <Avatar className={classes.avatar} style={{backgroundColor: '#1890ff'}} icon={<UserOutlined />} />
-                            {login}&nbsp;&nbsp;&nbsp; <span className={classes.line}>|</span>&nbsp;&nbsp;&nbsp;<button className={classes.btnLogout} onClick={logoutCallback}>Log out</button></div>
-                        : <Link className={classes.item} to={'/login'}>Login</Link>
+                        ? <div className="item-login"> <Avatar className="avatar" icon={<UserOutlined />} />
+                            {login}&nbsp;&nbsp;&nbsp; <span>|</span>&nbsp;&nbsp;&nbsp;<button className="logout-btn" onClick={logoutCallback}>Log out</button></div>
+                        : <Link className="item-login" to={'/login'}>Login</Link>
                     }
                 </div>
             </Col>
         </Row>
     </Header>
-
-
-    // <header className={classes.header}>
-    //     <div className='app-wrapper'>
-    //         <img alt={''} src='https://www.smeg.com/binaries/content/gallery/logo/logo_bianco_no-back.png' />
-    //         <div className={classes.loginBlock}>
-    //             {props.isAuth
-    //                 ? <div className={classes.item}>{props.login}  | <button className={classes.btnLogout} onClick={props.logout}>Log out</button></div>
-    //                 : <NavLink className={classes.item} to={'/login'}>Login</NavLink>
-    //             }
-    //         </div>
-    //     </div>
-    // </header>
 }
 
 export default AppHeader;

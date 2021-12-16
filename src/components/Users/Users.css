@@ -1,9 +1,4 @@
-/** {*/
-/*    color: #494450;*/
-/*}*/
-
-.wrapForItem {
-    /*border: 1px solid #f0f2f5;*/
+.wrapper-user {
     border: 1px solid #fff;
     background-color: #fff;
     padding: 15px 25px;
@@ -11,26 +6,12 @@
     margin-bottom: 17px;
 }
 
-.setBtn {
-    letter-spacing: 1px;
-    cursor: pointer;
-    width: 398px;
-    height: 40px;
-    text-align: center;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 500;
-    margin: auto 0;
-}
 
-.mainBtn {
-    border: 1px solid #1890ff;
-    color: #ebe9ef;
-    background-color: #1890ff;
+.main-btn {
     width: 20%;
 }
 
-.setBtn2 {
+.middle-btn {
     letter-spacing: 1px;
     cursor: pointer;
     width: 398px;
@@ -42,57 +23,54 @@
     margin-top: 25px;
 }
 
-.mainBtn2 {
-    border: 1px solid #1890ff;
-    color: #ebe9ef;
-    background-color: #1890ff;
+.action-btn {
     width: 100%;
 }
 
-.avatar {
+.avatar-user {
     width: 90px;
     height: 90px;
+    background-color: #1890ff;
 }
 
-.icon {
+.icon-user {
     text-align: center;
     font-size: 40px;
     padding-top: 22px;
     font-weight: 300;
 }
 
-.img {
+.img-user {
     border-radius: 50%;
     width: 90px;
     height: 90px;
 }
 
-.mainInfo {
+.info-user {
     padding-left: 15px;
     vertical-align: middle;
     margin: auto 0;
 }
 
-.input {
+.input-user {
     font-size: 16px;
     padding: 8px 15px;
     margin-right: 10px;
     width: 39%;
     border-radius: 3px;
-    /*border: 1px solid #796f86;*/
     border: none;
 }
 
-.form {
+.form-user {
     margin-bottom: 25px;
 }
 
-.name {
+.name-user {
     font-size: 19px;
     font-weight: 500;
     margin-bottom: 6px;
 }
 
-.location {
+.location-user {
     font-size: 15px;
 }

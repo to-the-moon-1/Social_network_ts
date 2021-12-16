@@ -1,8 +1,8 @@
-import {Field, Form, Formik} from "formik";
 import React from "react";
-import {FilterType} from "../../redux/users-reducer";
-import classes from "./Users.module.css"
 import {useSelector} from "react-redux";
+import {Field, Form, Formik} from "formik";
+
+import {FilterType} from "../../redux/users-reducer";
 import {getUsersFilter} from "../../redux/users-selectors";
 
 const usersSearchFormValidate = (values: any) => {
@@ -42,14 +42,14 @@ const UsersSearchForm: React.FC<PropsType> = React.memo((props) => {
                 enableReinitialize={true}
         >
             {({ isSubmitting }) => (
-                <Form className={classes.form}>
-                    <Field className={classes.input} placeholder="Name" type="text" name="term" />
-                    <Field className={classes.input} name="friend" as="select">
+                <Form className="form-user">
+                    <Field className="input-user" placeholder="Name" type="text" name="term" />
+                    <Field className="input-user" name="friend" as="select">
                         <option value="null">All</option>
                         <option value="true">Followed</option>
                         <option value="false">Unfollowed</option>
                     </Field>
-                    <button className={[classes.setBtn, classes.mainBtn].join(' ')} type="submit" disabled={isSubmitting}>
+                    <button className="big-btn main-btn" type="submit" disabled={isSubmitting}>
                         Search
                     </button>
                 </Form>

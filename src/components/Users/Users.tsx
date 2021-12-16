@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
-import Paginator from "../Paginator/Paginator";
-import User from "./User";
-import UsersSearchForm from "./UsersSearchForm";
-import {FilterType, followThunk, getUsers, unfollowThunk} from "../../redux/users-reducer";
 import {useDispatch, useSelector} from "react-redux";
+import { useHistory } from 'react-router-dom';
+import * as queryString from "querystring";
+
+import {FilterType, followThunk, getUsers, unfollowThunk} from "../../redux/users-reducer";
 import {
     getAllUsers,
     getCurrentPage,
@@ -11,8 +11,12 @@ import {
     getPageSize,
     getUsersFilter
 } from "../../redux/users-selectors";
-import { useHistory } from 'react-router-dom';
-import * as queryString from "querystring";
+
+import Paginator from "../Paginator/Paginator";
+import User from "./User";
+import UsersSearchForm from "./UsersSearchForm";
+
+import "./Users.css";
 
 type PropsType = {
     // currentPage: number,

@@ -1,0 +1,62 @@
+.wrapper-dialogs {
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 45px 55px;
+    border-radius: 3px;
+    height: 840px;
+}
+
+.dialog {
+    background-color: #fff;
+    border-radius: 3px;
+    margin-right: 32px;
+    margin-bottom: 17px;
+    padding: 20px 25px;
+}
+
+.active.active-dialog {
+    color: #1890ff;
+    opacity: 1;
+}
+
+.wrapper-dialog {
+    padding-left: 10px;
+}
+
+.dialog-user-name {
+    text-decoration: unset;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 18px;
+    font-weight: 700;
+    opacity: .7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.text-dialog {
+    width: 100%;
+    word-break: break-all;
+    line-height: 25px;
+    margin-top: 3px;
+    font-size: 15px;
+}
+
+.img-dialog {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.text {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f0f2f5;
+}
+
+.main-btn {
+    width: 400px;
+}

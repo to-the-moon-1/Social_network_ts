@@ -31,22 +31,22 @@
     opacity: 0;
 }
 
-.setBtn {
-    letter-spacing: 1px;
-    cursor: pointer;
-    width: 398px;
-    height: 40px;
-    text-align: center;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 500;
-    margin: auto 0;
-}
+/*.big-btn {*/
+/*    letter-spacing: 1px;*/
+/*    cursor: pointer;*/
+/*    width: 398px;*/
+/*    height: 40px;*/
+/*    text-align: center;*/
+/*    border-radius: 3px;*/
+/*    font-size: 16px;*/
+/*    font-weight: 500;*/
+/*    margin: auto 0;*/
+/*}*/
 
-.mainBtn {
-    border: 1px solid #1890ff;
-    color: #ebe9ef;
-    background-color: #1890ff;
+.main-btn {
+    /*border: 1px solid #1890ff;*/
+    /*color: #ebe9ef;*/
+    /*background-color: #1890ff;*/
     width: 400px;
     text-align: center;
     margin-top: 25px;

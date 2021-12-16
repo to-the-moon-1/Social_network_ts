@@ -1,9 +1,10 @@
-import classes from "./Users.module.css";
 import React from "react";
 import {NavLink} from "react-router-dom";
-import {UserType} from "../../types/types";
 import {Avatar, Col, Row} from "antd";
 import {UserOutlined} from "@ant-design/icons";
+
+
+import {UserType} from "../../types/types";
 
 type PropsType = {
     user: UserType,
@@ -13,31 +14,31 @@ type PropsType = {
 }
 
 let User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow}) => {
-    return <Row key={user.id} className={classes.wrapForItem}>
+    return <Row key={user.id} className="wrapper-user">
                 <Col span={2}>
                         <NavLink to={'/profile/' + user.id}>
                             {user.photos.small != null
-                                ? <img className={classes.img} alt={'user'} src={user.photos.small} />
-                                : <Avatar className={classes.avatar} style={{backgroundColor: '#1890ff'}} icon={<UserOutlined className={classes.icon} />} />}
+                                ? <img className="img-user" alt={'user'} src={user.photos.small} />
+                                : <Avatar className="avatar-user" icon={<UserOutlined className="icon-user" />} />}
                             {/*<img alt={'user'} src={user.photos.small != null ? user.photos.small : userPhoto} />*/}
                         </NavLink>
                 </Col>
-                    <Col span={18} className={classes.mainInfo}>
+                    <Col span={18} className="info-user">
                         <span>
-                            <div className={classes.name}>{user.name}</div>
+                            <div className="name-user">{user.name}</div>
                             {/*<div>{u.status}</div>*/}
                         </span>
                         <span>
-                            <div className={classes.location}>{'location.country'}</div>
-                            <div className={classes.location}>{'location.city'}</div>
+                            <div className="location-user">{'location.country'}</div>
+                            <div className="location-user">{'location.city'}</div>
                         </span>
                     </Col>
                     <Col span={4}>
                         {user.followed
-                            ? <button className={[classes.setBtn2, classes.mainBtn2].join(' ')} disabled={followingInProgress.some(id => id === user.id)}
+                            ? <button className="middle-btn action-btn" disabled={followingInProgress.some(id => id === user.id)}
                                       onClick={() => {unfollow(user.id);}}>Unfollow</button>
 
-                            : <button className={[classes.setBtn2, classes.mainBtn2].join(' ')} disabled={followingInProgress.some(id => id === user.id)}
+                            : <button className="middle-btn action-btn" disabled={followingInProgress.some(id => id === user.id)}
                                       onClick={() => {follow(user.id);}}>Follow</button>}
                     </Col>
     </Row>

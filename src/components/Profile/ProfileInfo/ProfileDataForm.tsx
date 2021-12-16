@@ -25,7 +25,8 @@ const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> & Prop
         {error && <div className={classes.formSummaryError}>
             {error}
         </div>}
-        <button className={[classes.setBtn, classes.mainBtn, classes.outBtn].join(' ')}>Save</button>
+        {/*<button className={[classes.big-btn, classes.main-btn, classes.outBtn].join(' ')}>Save</button>*/}
+        <button>Save</button>
     </form>
 }
 

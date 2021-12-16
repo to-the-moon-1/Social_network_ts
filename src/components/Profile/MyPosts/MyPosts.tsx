@@ -71,7 +71,8 @@ const AddNewPostForm: React.FC<InjectedFormProps<AddPostFormValuesType, PropsTyp
                 <Field className={classes.textarea} component={Textarea} name={'newPostText'} placeholder={'Enter your post...'} validate={[required, maxLength100]} />
             </div>
             <div>
-                <button className={[classes.setBtn, classes.mainBtn].join(' ')}>Add post</button>
+                {/*<button className={[classes.big-btn, classes.main-btn].join(' ')}>Add post</button>*/}
+                <button>Add post</button>
             </div>
         </form>
     )

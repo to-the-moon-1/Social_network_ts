@@ -1,0 +1,61 @@
+.wrapper-login-form {
+    width: 60%;
+    height: 100%;
+}
+
+.main-head {
+    margin-top: 0;
+    margin-bottom: 23px;
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: 600;
+    opacity: .6;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.input-small {
+    font-size: 16px;
+    padding: 8px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    border-radius: 3px;
+    border: none;
+}
+
+.img-captcha {
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.checkbox {
+    margin-top: 6px;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.wrapper-checkbox {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.remember-me {
+    margin-bottom: 5px;
+}
+
+.hr {
+    margin-bottom: 15px;
+}
+
+.form-summary-error {
+    border: 1px solid red;
+    padding: 5px;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
