@@ -3,32 +3,18 @@ import {Link} from "react-router-dom";
 import {Avatar, Col, Menu, Row} from "antd";
 import {UserOutlined} from "@ant-design/icons";
 import { Header } from 'antd/lib/layout/layout';
-import {useDispatch, useSelector} from "react-redux";
-import {selectIsAuth, selectLogin} from "../../redux/auth-selectors";
-import {logout} from "../../redux/auth-reducer";
 
-import './Header.css';
+type MapPropsType = {
+    isAuth: boolean,
+    loginCallback: string | null,
+}
 
-// export type MapPropsType = {
-//     isAuth: boolean,
-//     login: string | null,
-// }
-//
-// export type DispatchPropsType = {
-//     logout: () => void,
-// }
+type DispatchPropsType = {
+    logoutCallback: () => void,
+}
 
-const AppHeader: React.FC = () => {
-    const isAuth = useSelector(selectIsAuth)
-    const login = useSelector(selectLogin)
-
-    const dispatch = useDispatch()
-
-    const logoutCallback = () => {
-        dispatch(logout())
-    }
-
-    return <Header className="header">
+const AppHeader: React.FC<MapPropsType & DispatchPropsType> = ({isAuth, loginCallback, logoutCallback}) => (
+    <Header className="header">
         <div className="logo" />
         <Row className="wrapper-header">
             <Col span={18}>
@@ -40,13 +26,13 @@ const AppHeader: React.FC = () => {
                 <div className="wrapper-login">
                     {isAuth
                         ? <div className="item-login"> <Avatar className="avatar" icon={<UserOutlined />} />
-                            {login}&nbsp;&nbsp;&nbsp; <span>|</span>&nbsp;&nbsp;&nbsp;<button className="logout-btn" onClick={logoutCallback}>Log out</button></div>
+                            {loginCallback}&nbsp;&nbsp;&nbsp; <span>|</span>&nbsp;&nbsp;&nbsp;<button className="logout-btn" onClick={logoutCallback}>Log out</button></div>
                         : <Link className="item-login" to={'/login'}>Login</Link>
                     }
                 </div>
             </Col>
         </Row>
     </Header>
-}
+)
 
 export default AppHeader;

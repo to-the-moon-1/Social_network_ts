@@ -3,7 +3,7 @@ import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {Col, Row} from "antd";
 
 import {maxLengthCreator, required} from "../../../utils/validators/validators";
-import {Textarea} from "../../common/FormsControls/FormsControl";
+import {Textarea} from "../../common/FormsControls/Textarea";
 import {PostType, ProfileType} from "../../../types/types";
 
 import Post from "./Post/Post";

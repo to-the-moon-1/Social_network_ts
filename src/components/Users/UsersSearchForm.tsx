@@ -1,41 +1,23 @@
 import React from "react";
-import {useSelector} from "react-redux";
 import {Field, Form, Formik} from "formik";
 
 import {FilterType} from "../../redux/users-reducer";
-import {getUsersFilter} from "../../redux/users-selectors";
+import {FormProps} from "./UsersContainer";
+import {FriendFormType} from "./UsersContainer";
 
-const usersSearchFormValidate = (values: any) => {
+const usersSearchFormValidate = () => {
     const errors = {};
     return errors;
 }
 
-type FriendFormType = 'true' | 'false' | 'null';
-
-type FormProps = {
-    term: string,
-    friend: FriendFormType,
-}
-
 type PropsType = {
-    onFilterChanged: (filter: FilterType) => void,
+    // onFilterChanged: (filter: FilterType) => void,
+    submit: (values: FormProps, {setSubmitting}: {setSubmitting: (isSubmitting: boolean) => void}) => void,
+    filter: FilterType,
 }
 
-const UsersSearchForm: React.FC<PropsType> = React.memo((props) => {
-
-    const filter = useSelector(getUsersFilter);
-
-    const submit = (values: FormProps, {setSubmitting}: {setSubmitting: (isSubmitting: boolean) => void}) => {
-        const filter: FilterType = {
-            term: values.term,
-            friend: values.friend === 'null' ? null : values.friend === 'true' ? true : false
-        }
-
-        props.onFilterChanged(filter);
-        setSubmitting(false);
-    }
-
-    return <div>
+const UsersSearchForm: React.FC<PropsType> = React.memo(({filter, submit}) => (
+    <div>
         <Formik initialValues={{ term: filter.term, friend: String(filter.friend) as FriendFormType}}
                 validate={usersSearchFormValidate}
                 onSubmit={submit}
@@ -56,6 +38,6 @@ const UsersSearchForm: React.FC<PropsType> = React.memo((props) => {
             )}
         </Formik>
     </div>
-})
+))
 
 export default UsersSearchForm;

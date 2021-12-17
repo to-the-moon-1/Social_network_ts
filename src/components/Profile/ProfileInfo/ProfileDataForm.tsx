@@ -1,7 +1,8 @@
 import React from "react";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
 
-import {Input, Textarea} from "../../common/FormsControls/FormsControl";
+import {Input} from "../../common/FormsControls/Input";
+import {Textarea} from "../../common/FormsControls/Textarea";
 import {ProfileType} from "../../../types/types";
 
 type PropsType = {
