@@ -55,7 +55,7 @@ const ProfileContainer: React.FC<PropsType> = ({match, authorizedUserId, history
     return (
         <Profile profile={profile}
                  posts={posts}
-                 isOwner={!!match.params.userId}
+                 isOwner={!match.params.userId}
                  status={status}
                  updateStatus={updateStatus}
                  savePhoto={savePhoto}

@@ -13,7 +13,7 @@ type PropsType = {
     maxLength100: FieldValidatorType,
     onAddPost: (values: AddPostFormValuesType) => void,
     isOwner: boolean,
-    profile: ProfileType | null,
+    profile: ProfileType,
 }
 
 const MyPosts: React.FC<PropsType> = ({posts, maxLength100, onAddPost, isOwner, profile}) => (

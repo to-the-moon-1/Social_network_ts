@@ -21,7 +21,7 @@ const Navbar: React.FC = () => (
             defaultSelectedKeys={['1']}
         >
             <SubMenu key="sub1" icon={<UserOutlined />} title="My profile">
-                <Menu.Item key="1"><Link to='/profile'>Profile</Link></Menu.Item>
+                <Menu.Item key="1"><Link to='/profile/1'>Profile</Link></Menu.Item>
                 <Menu.Item key="2"><Link to='/dialogs'>Messages</Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" icon={<MessageOutlined />} title="Chat">

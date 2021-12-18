@@ -11,7 +11,7 @@ import MyPosts from "./MyPosts";
 export type MapPropsType = {
     posts: Array<PostType>,
     isOwner: boolean,
-    profile: ProfileType | null,
+    profile: ProfileType,
 }
 
 export type DispatchPropsType = {

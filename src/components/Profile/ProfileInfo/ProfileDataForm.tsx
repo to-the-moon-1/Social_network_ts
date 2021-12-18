@@ -9,8 +9,8 @@ type PropsType = {
     profile: ProfileType,
 }
 
-const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> & PropsType> = ({handleSubmit, profile, error}) => {
-    return <form onSubmit={handleSubmit} className="wrapper-profile-form">
+const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> & PropsType> = ({handleSubmit, profile, error}) => (
+    <form onSubmit={handleSubmit} className="wrapper-profile-form">
         <div className="wrapper-field"><b>About me:</b>
             <Field className="textarea textarea-profile" component={Textarea} name={'aboutMe'} placeholder={'About me'} />
         </div>
@@ -28,7 +28,7 @@ const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> & Prop
         </div>}
         <button className="big-btn main-btn save-btn">Save</button>
     </form>
-}
+)
 
 const ProfileDataFormReduxForm = reduxForm<ProfileType, PropsType>({form: 'edit-profile'})(ProfileDataForm)
 

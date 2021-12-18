@@ -2,11 +2,11 @@ import React from 'react';
 import {Col, Row} from "antd";
 
 import {DialogType, MessageType} from "../../redux/dialogs-reducer";
-import DialogItem from "./DialogItem/DialogItem";
-import Message from "./Message/Message";
 import AddMessageFormRedux from "./AddMessageForm";
 import {FieldValidatorType} from "../../utils/validators/validators";
 import {NewMessageFormType} from "./DialogsContainer";
+import DialogItem from "./DialogItem";
+import Message from "./Message";
 
 type PropsType = {
     state: {dialogs: DialogType[], messages: MessageType[]},

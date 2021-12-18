@@ -3,13 +3,26 @@ import {PhotosType, PostType, ProfileType} from "../types/types";
 import {profileAPI} from "../api/profile-api";
 import {BaseThunkType, InferActionsTypes} from "./redux-store";
 
+import smallImg from "../assets/images/post/Tony.jpg";
+import largeImg from "../assets/images/tonyMain.jpg";
+
 let initialState = {
     posts: [
         {id: 1, message: 'It is my first post', reposts: 56, likesCount: 723},
         {id: 2, message: 'Hi, how are you?', reposts: 41, likesCount: 682}
     ] as Array<PostType>,
-    profile: null as ProfileType | null,
-    status: '',
+    // profile: null as ProfileType | null,
+    profile: {userId: 1, lookingForAJob: false, lookingForAJobDescription: '', fullName: 'dark_angel', contacts: {
+            github: '',
+            vk: '',
+            facebook: '',
+            instagram: '',
+            twitter: '',
+            website: '',
+            youtube: '',
+            mainLink: '',
+        }, photos: {small: smallImg, large: largeImg}, aboutMe: ''} as ProfileType,
+    status: 'I am a hero!',
 }
 
 export type InitialStateType = typeof initialState;

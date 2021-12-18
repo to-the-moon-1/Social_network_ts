@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0820c7c-28c3-46d0-af26-398f854a6d2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/AddNewPostForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileContact.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfoContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileDataForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileDataForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Profile/MyPosts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Dialogs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -47,11 +58,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Programming\first-ts-app-2\src\components\Profile\MyPosts" />
       <recent name="E:\Programming\first-ts-app-2\src\components\Dialogs" />
+      <recent name="E:\Programming\first-ts-app-2\src\components\Profile\ProfileInfo" />
+      <recent name="E:\Programming\first-ts-app-2\src\components\Profile\MyPosts" />
       <recent name="E:\Programming\first-ts-app-2\src\pages\Chat" />
       <recent name="E:\Programming\first-ts-app-2\src\components\common\FormsControls" />
-      <recent name="E:\Programming\first-ts-app-2\src\components\Header" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Programming\first-ts-app-2\src" />
@@ -222,7 +233,8 @@
       <workItem from="1639686104626" duration="8237000" />
       <workItem from="1639697606706" duration="13750000" />
       <workItem from="1639770863215" duration="2911000" />
-      <workItem from="1639778633422" duration="12126000" />
+      <workItem from="1639778633422" duration="12452000" />
+      <workItem from="1639853707054" duration="7625000" />
     </task>
     <servers />
   </component>
