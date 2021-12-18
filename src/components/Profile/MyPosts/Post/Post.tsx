@@ -12,10 +12,11 @@ type PropsType = {
     profile: ProfileType | null,
 }
 
-const Post: React.FC<PropsType> = ({message, reposts, likesCount, profile}) => {
-    return <div className="item-post">
+const Post: React.FC<PropsType> = ({message, reposts, likesCount, profile}) => (
+    <div className="item-post">
         <Row>
             <Col span={4}>
+                {/*<img className="img-user-post" alt={''} src={profile?.photos.small} />*/}
                 <img className="img-user-post" alt={''} src={mainImg} />
             </Col>
             <Col span={20} className="wrapper-post">
@@ -33,6 +34,6 @@ const Post: React.FC<PropsType> = ({message, reposts, likesCount, profile}) => {
             </Col>
         </Row>
     </div>
-}
+)
 
 export default Post;

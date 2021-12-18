@@ -3,7 +3,7 @@ import React from 'react';
 import {PostType, ProfileType} from "../../types/types";
 
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
-import MyPostsContainer from "./MyPosts/MyPostsContainer";
+import PostsContainer from "./MyPosts/MyPostsContainer";
 
 type PropsType = {
     profile: ProfileType | null,
@@ -18,7 +18,7 @@ type PropsType = {
 const Profile: React.FC<PropsType> = ({isOwner, profile, status, updateStatus, savePhoto, saveProfile}) => (
     <div className="wrapper-profile">
         <ProfileInfo isOwner={isOwner} profile={profile} status={status} updateStatus={updateStatus} savePhoto={savePhoto} saveProfile={saveProfile} />
-        <MyPostsContainer />
+        <PostsContainer />
     </div>
 )
 
