@@ -9,18 +9,18 @@ type PropsType = {
     messageText: string,
 }
 
-const DialogItem: React.FC<PropsType> = (props) => {
-    let path = '/dialogs/' + props.id;
+const DialogItem: React.FC<PropsType> = ({id, src, name, messageText}) => {
+    let path = '/dialogs/' + id;
 
     return <div className="dialog">
             <Row>
             <Col span={4}>
-                <img className="img-dialog" src={props.src} alt={'userImage'} />
+                <img className="img-dialog" src={src} alt={'userImage'} />
             </Col>
             <Col span={20} className="wrapper-dialog">
                 <NavLink to={path} className="dialog-user-name" activeClassName="active active-dialog">
-                    {props.name}</NavLink>
-                <div className="text-dialog">{props.messageText}</div>
+                    {name}</NavLink>
+                <div className="text-dialog">{messageText}</div>
             </Col>
         </Row>
     </div>

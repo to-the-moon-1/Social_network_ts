@@ -5,10 +5,6 @@ import {PostType, ProfileType} from "../../types/types";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
-import './ProfileInfo/ProfileInfo.css';
-import './MyPosts/MyPosts.css';
-import './MyPosts/Post/Post.css';
-
 type PropsType = {
     profile: ProfileType | null,
     status: string,
@@ -19,12 +15,11 @@ type PropsType = {
     posts: Array<PostType>,
 }
 
-const Profile: React.FC<PropsType> = (props) => {
-
-    return <div className="wrapper-profile">
-        <ProfileInfo isOwner={props.isOwner} profile={props.profile} status={props.status} updateStatus={props.updateStatus} savePhoto={props.savePhoto} saveProfile={props.saveProfile} />
+const Profile: React.FC<PropsType> = ({isOwner, profile, status, updateStatus, savePhoto, saveProfile}) => (
+    <div className="wrapper-profile">
+        <ProfileInfo isOwner={isOwner} profile={profile} status={status} updateStatus={updateStatus} savePhoto={savePhoto} saveProfile={saveProfile} />
         <MyPostsContainer />
     </div>
-}
+)
 
 export default Profile;

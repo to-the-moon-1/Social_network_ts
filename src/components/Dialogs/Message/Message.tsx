@@ -4,8 +4,8 @@ type PropsType = {
     message: string,
 }
 
-const Message: React.FC<PropsType> = (props) => {
-    return <div className="text">{props.message}</div>
-}
+const Message: React.FC<PropsType> = ({message}) => (
+    <div className="text">{message}</div>
+)
 
 export default Message;

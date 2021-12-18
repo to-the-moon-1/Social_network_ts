@@ -8,8 +8,6 @@ import {ContactsType, ProfileType} from "../../../types/types";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataFormReduxForm from "./ProfileDataForm";
 
-import './ProfileInfo.css'
-
 type PropsType = {
     profile: ProfileType | null,
     status: string,

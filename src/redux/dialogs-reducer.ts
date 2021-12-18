@@ -4,14 +4,14 @@ import strange from "../assets/images/dialogs/Doctor_Strange.jpg";
 import panther from "../assets/images/dialogs/Black_Panther.jpg";
 import thor from "../assets/images/dialogs/thor.jpg";
 
-type DialogType = {
+export type DialogType = {
     id: number,
     name: string,
     messageText: string,
     src: string,
 }
 
-type MessageType = {
+export type MessageType = {
     id: number,
     message: string,
 }

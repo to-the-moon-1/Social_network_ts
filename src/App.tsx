@@ -25,7 +25,7 @@ const { Content } = Layout;
 
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
-const ChatPageContainer = React.lazy(() => import("./pages/Chat/ChatPage"));
+const ChatPageContainer = React.lazy(() => import("./pages/Chat/ChatContainer"));
 
 type MapPropsType = ReturnType<typeof mapStateToProps>
 // type DispatchPropsType = {

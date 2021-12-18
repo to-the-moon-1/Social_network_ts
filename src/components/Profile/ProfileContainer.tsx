@@ -1,11 +1,17 @@
-import React from 'react';
-import Profile from "./Profile";
-import {connect} from "react-redux";
-import {getStatus, getUserProfile, updateStatus, savePhoto, saveProfile} from "../../redux/profile-reducer";
-import {RouteComponentProps, withRouter} from 'react-router-dom';
+import React, {useCallback, useEffect} from 'react';
 import {compose} from "redux";
+import {connect} from "react-redux";
+import {RouteComponentProps, withRouter} from 'react-router-dom';
+
+import {getStatus, getUserProfile, updateStatus, savePhoto, saveProfile} from "../../redux/profile-reducer";
 import {AppStateType} from "../../redux/redux-store";
 import {ProfileType} from "../../types/types";
+
+import Profile from "./Profile";
+
+import './ProfileInfo/ProfileInfo.css';
+import './MyPosts/MyPosts.css';
+import './MyPosts/Post/Post.css';
 
 type MapPropsType = ReturnType<typeof mapStateToProps>
 type DispatchPropsType = {
@@ -18,47 +24,46 @@ type DispatchPropsType = {
 type PathParamsType = { userId: string, }
 type PropsType = MapPropsType & DispatchPropsType & RouteComponentProps<PathParamsType>
 
-class ProfileContainer extends React.Component<PropsType> {
-
-    refreshProfile() {
-        let userId: number | null = +this.props.match.params.userId;
+const ProfileContainer: React.FC<PropsType> = ({match, authorizedUserId, history, getUserProfile, getStatus, profile, posts, status, updateStatus, savePhoto,saveProfile}) => {
+    const refreshProfile = useCallback(() => {
+        let userId: number | null = +match.params.userId;
         if (!userId) {
-            userId = this.props.authorizedUserId;
+            userId = authorizedUserId;
             if (!userId) {
-                this.props.history.push('/login');
+                history.push('/login');
             }
-        }
-
-        if(!userId) {
-            console.error('ID should exists')
         } else {
-            this.props.getUserProfile(userId);
-            this.props.getStatus(userId);
+            getUserProfile(userId);
+            getStatus(userId);
         }
-    }
+    }, [authorizedUserId, getStatus, getUserProfile, history, match.params.userId])
 
-    componentDidMount() {
-        this.refreshProfile()
-    }
+    // const refreshNullProfile = (prevProps: PropsType) => {
+    //     if (match.params.userId !== prevProps.match.params.userId) {
+    //         refreshProfile()
+    //     }
+    // }
 
-    componentDidUpdate(prevProps: PropsType, prevState: PropsType) {
-        if (this.props.match.params.userId !== prevProps.match.params.userId) {
-            this.refreshProfile()
-        }
-    }
+    // useEffect(() => {
+    //     refreshProfile()
+    // })
 
-    render() {
-        return (
-            <Profile {...this.props} profile={this.props.profile}
-                     isOwner={!this.props.match.params.userId}
-                     status={this.props.status}
-                     updateStatus={this.props.updateStatus}
-                     savePhoto={this.props.savePhoto} />
-        )
-    }
+    useEffect(() => {
+        refreshProfile()
+    }, [refreshProfile, match.params.userId])
+
+    return (
+        <Profile profile={profile}
+                 posts={posts}
+                 isOwner={!!match.params.userId}
+                 status={status}
+                 updateStatus={updateStatus}
+                 savePhoto={savePhoto}
+                 saveProfile={saveProfile} />
+    )
 }
 
-let mapStateToProps = (state: AppStateType) => {
+const mapStateToProps = (state: AppStateType) => {
     return ({
         posts: state.profilePage.posts,
         profile: state.profilePage.profile,
