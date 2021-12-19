@@ -1,6 +1,6 @@
 import { FormAction, stopSubmit } from 'redux-form';
 import { PhotosType, PostType, ProfileType } from '../types/types';
-import { profileAPI } from '../api/profile-api';
+import profileAPI from '../api/profile-api';
 import { BaseThunkType, InferActionsTypes } from './redux-store';
 
 import smallImg from '../assets/images/post/Tony.jpg';
@@ -123,7 +123,7 @@ export const savePhoto =
     };
 
 export const saveProfile =
-  (profile: ProfileType): ThunkType =>
+  (profile: ProfileType): ThunkType | Promise<any> =>
     async (dispatch, getState): Promise<void> => {
       const { userId } = getState().auth;
       const data = await profileAPI.saveProfile(profile);

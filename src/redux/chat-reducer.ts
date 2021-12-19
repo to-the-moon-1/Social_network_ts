@@ -52,7 +52,9 @@ const chatReducer = (action: ActionsTypes, state = initialState): InitialStateTy
 
 let newMessageHandler: ((messages: ChatMessageAPIType[]) => void) | null = null;
 
-const newMessageHandlerCreator = (dispatch: Dispatch): (messages: ChatMessageAPIType[]) => void => {
+const newMessageHandlerCreator = (
+  dispatch: Dispatch,
+): ((messages: ChatMessageAPIType[]) => void) => {
   if (newMessageHandler === null) {
     newMessageHandler = messages => {
       dispatch(actions.messagesReceived(messages));
@@ -63,7 +65,7 @@ const newMessageHandlerCreator = (dispatch: Dispatch): (messages: ChatMessageAPI
 
 let statusChangedHandler: ((status: StatusType) => void) | null = null;
 
-const statusChangedHandlerCreator = (dispatch: Dispatch): (status: StatusType) => void => {
+const statusChangedHandlerCreator = (dispatch: Dispatch): ((status: StatusType) => void) => {
   if (statusChangedHandler === null) {
     statusChangedHandler = status => {
       dispatch(actions.statusChanged(status));
@@ -84,10 +86,8 @@ export const stopMessagesListening = (): ThunkType => async dispatch => {
   chatAPI.stop();
 };
 
-export const sendMessage =
-  (message: string): ThunkType =>
-    async dispatch => {
-      chatAPI.sendMessage(message);
-    };
+export const sendMessage = (message: string): ThunkType | void => {
+  chatAPI.sendMessage(message);
+};
 
 export default chatReducer;

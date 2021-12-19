@@ -44,13 +44,8 @@
     "lint:fix": "npm run lint -- --fix",
     "lint:styles:fix": "npm run lint:styles -- --fix",
     "format": "prettier \"src/**/*.{js,jsx,yml,yaml,ts,tsx,md,graphql,mdx}\" --write",
-    "format:styles": "prettier \"src/**/*.css\" --parser css --write"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "format:styles": "prettier \"src/**/*.css\" --parser css --write",
+    "precommit": "lint-staged"
   },
   "browserslist": {
     "production": [
@@ -66,13 +61,13 @@
   },
   "devDependencies": {
     "@types/uuid": "8.3.1",
-    "gh-pages": "3.1.0",
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.0.0",
+    "eslint": "7.11.0",
     "eslint-config-airbnb": "18.1.0",
     "eslint-config-airbnb-typescript": "16.1.0",
     "eslint-config-prettier": "6.11.0",
-    "eslint-config-react-app": "5.2.1",
+    "eslint-config-react-app": "^5.2.1",
     "eslint-config-standard": "14.1.1",
     "eslint-import-resolver-typescript": "2.0.0",
     "eslint-plugin-babel": "5.3.1",
@@ -86,7 +81,7 @@
     "eslint-plugin-react": "7.20.6",
     "eslint-plugin-react-hooks": "1.7.0",
     "eslint-plugin-standard": "4.0.1",
-    "eslint": "7.11.0",
+    "gh-pages": "3.1.0",
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
     "prettier": "2.5.1",

@@ -5,7 +5,7 @@ type SavePhotoResponseDataType = {
   photos: PhotosType;
 };
 
-export const profileAPI = {
+const profileAPI = {
   getProfile(userId: number) {
     return instance.get<ProfileType>(`profile/${userId}`).then(res => res.data);
   },
@@ -24,10 +24,10 @@ export const profileAPI = {
 
     return instance
       .put<APIResponseType<SavePhotoResponseDataType>>('profile/photo', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      })
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
       .then(res => res.data);
   },
 
@@ -35,3 +35,5 @@ export const profileAPI = {
     return instance.put<APIResponseType>('profile', profile).then(res => res.data);
   },
 };
+
+export default profileAPI;

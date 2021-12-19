@@ -88,6 +88,31 @@ const ProfileContainer: React.FC<PropsType> = ({
   );
 };
 
+ProfileContainer.defaultProps = {
+  posts: [],
+  profile: {
+    userId: 0,
+    lookingForAJob: false,
+    lookingForAJobDescription: '',
+    fullName: '',
+    contacts: {
+      github: '',
+      vk: '',
+      facebook: '',
+      instagram: '',
+      twitter: '',
+      website: '',
+      youtube: '',
+      mainLink: '',
+    },
+    photos: { small: '', large: '' },
+    aboutMe: '',
+  },
+  status: '',
+  authorizedUserId: 0,
+  isAuth: false,
+};
+
 export default compose<React.ComponentType>(
   connect(mapStateToProps, { getUserProfile, getStatus, updateStatus, savePhoto, saveProfile }),
   withRouter,

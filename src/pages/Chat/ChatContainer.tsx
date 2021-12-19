@@ -52,12 +52,12 @@ const ChatContainer: React.FC = () => {
     setMessage('');
   };
 
-  const scrollHandler = (e: React.UIEvent<HTMLDivElement, UIEvent>): void => {
+  const scrollHandler = (e: React.UIEvent<HTMLDivElement, UIEvent>): boolean | void => {
     const element = e.currentTarget;
     if (Math.abs(element.scrollHeight - element.scrollTop - element.clientHeight) < 300) {
-      !isAutoScroll && setIsAutoScroll(true);
+      return !isAutoScroll && setIsAutoScroll(true);
     }
-    isAutoScroll && setIsAutoScroll(false);
+    return isAutoScroll && setIsAutoScroll(false);
   };
 
   return (

@@ -43,4 +43,8 @@ const PaginatorContainer: React.FC<PropsType> = ({
   );
 };
 
+PaginatorContainer.defaultProps = {
+  portionSize: 10,
+};
+
 export default PaginatorContainer;

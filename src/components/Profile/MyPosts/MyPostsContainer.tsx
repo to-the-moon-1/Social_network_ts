@@ -49,7 +49,12 @@ const mapStateToProps = (state: { profilePage: { posts: Array<PostType> } }): Ma
   } as MapPropsType;
 };
 
-const PostsContainer = connect<MapPropsType, DispatchPropsType, Record<string, unknown>, AppStateType>(mapStateToProps, {
+const PostsContainer = connect<
+MapPropsType,
+DispatchPropsType,
+Record<string, unknown>,
+AppStateType
+>(mapStateToProps, {
   addPost: actions.addPostActionCreator,
 })(MyPostsContainer);
 

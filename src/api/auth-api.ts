@@ -17,9 +17,9 @@ const authAPI = {
   login(email: string, password: string, rememberMe = false, captcha: null | string = null) {
     return instance
       .post<APIResponseType<LoginResponseDataType, ResultCodesEnum | ResultCodeForCaptcha>>(
-        'auth/login',
-        { email, password, rememberMe, captcha },
-      )
+      'auth/login',
+      { email, password, rememberMe, captcha },
+    )
       .then(res => res.data);
   },
   logout() {

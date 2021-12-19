@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { ActionsTypes } from '../../redux/users-reducer';
 import { actions, InitialStateType } from '../../redux/dialogs-reducer';
-import { withAuthRedirect } from '../../hoc/withAuthRedirect';
+import withAuthRedirect from '../../hoc/withAuthRedirect';
 import { maxLengthCreator } from '../../utils/validators/validators';
 import Dialogs from './Dialogs';
 
