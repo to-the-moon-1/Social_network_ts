@@ -1,44 +1,52 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 
 type PropsType = {
-    status: string,
-    updateStatus: (status: string) => void,
-}
+  status: string;
+  updateStatus: (status: string) => void;
+};
 
-const ProfileStatusWithHooks: React.FC<PropsType> = (props) => {
+const ProfileStatusWithHooks: React.FC<PropsType> = ({ status, updateStatus }) => {
+  const [editMode, setEditMode] = useState(false);
+  const [newStatus, setNewStatus] = useState(status);
 
-    const [editMode, setEditMode] = useState(false);
-    const [status, setStatus] = useState(props.status);
+  useEffect(() => {
+    setNewStatus(status);
+  }, [status]);
 
-    useEffect(() => {
-        setStatus(props.status)
-    }, [props.status]);
+  const activateEditMode = (): void => {
+    setEditMode(true);
+  };
 
-    const activateEditMode = () => {
-        setEditMode(true);
-    }
+  const deactivateEditMode = (): void => {
+    setEditMode(false);
+    updateStatus(newStatus);
+  };
 
-    const deactivateEditMode = () => {
-        setEditMode(false);
-        props.updateStatus(status);
-    }
+  const onStatusChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setNewStatus(e.currentTarget.value);
+  };
 
-    const onStatusChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setStatus(e.currentTarget.value);
-    }
-
-        return <div>
-            {!editMode &&
-            <div className="status">
-                <span title='Please, double click to change!' onDoubleClick={activateEditMode}>{props.status || 'No status'}</span>
-            </div>
-            }
-            {editMode &&
-            <div>
-                <input className="status input-status" onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status}/>
-            </div>
-            }
+  return (
+    <div>
+      {!editMode && (
+        <div className="status">
+          <span onDoubleClick={activateEditMode} title="Please, double click to change!">
+            {status || 'No status'}
+          </span>
         </div>
-}
+      )}
+      {editMode && (
+        <div>
+          <input
+            className="status input-status"
+            onBlur={deactivateEditMode}
+            onChange={onStatusChange}
+            value={newStatus}
+          />
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default ProfileStatusWithHooks;

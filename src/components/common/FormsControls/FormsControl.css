@@ -1,12 +1,13 @@
 .form-control.error .input-error,
 .form-control.error .textarea-error {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
-.textarea-error, .input-error {
-    outline: none;
+.textarea-error,
+.input-error {
+  outline: none;
 }
 
 .form-control.error .text-error {
-    color: red;
+  color: red;
 }

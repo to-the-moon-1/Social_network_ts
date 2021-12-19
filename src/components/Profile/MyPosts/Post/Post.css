@@ -1,64 +1,65 @@
 .item-post {
-    border: 2px solid #1890ff;
-    border-radius: 3px;
-    margin-right: 32px;
-    margin-bottom: 17px;
-    padding: 20px 25px;
+  border: 2px solid #1890ff;
+  border-radius: 3px;
+  margin-right: 32px;
+  margin-bottom: 17px;
+  padding: 20px 25px;
 }
 
 .img-user-post {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 
 .wrapper-post {
-    padding-left: 18px;
+  padding-left: 18px;
 }
 
 .wrapper-text-post {
-    width: 100%;
-    word-break: break-all;
-    line-height: 25px;
-    margin-top: 3px;
-    font-size: 15px;
+  width: 100%;
+  word-break: break-all;
+  line-height: 25px;
+  margin-top: 3px;
+  font-size: 15px;
 }
 
 .name-user-post {
-    line-height: 18px;
-    font-weight: 700;
-    opacity: .7;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
 }
 
 .count {
-    line-height: 18px;
-    font-weight: 700;
-    opacity: .7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
 }
 
 .aboutMe {
-    font-style: italic;
-    font-size: 14px;
+  font-style: italic;
+  font-size: 14px;
 }
 
 .activity-post {
-    font-size: 14px;
-    margin-top: 30px;
-    text-align: right;
+  font-size: 14px;
+  margin-top: 30px;
+  text-align: right;
 }
 
 .like {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
-.like, .repost {
-    font-weight: 500;
-    letter-spacing: 1px;
-    color: #1890ff;
+.like,
+.repost {
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #1890ff;
 }

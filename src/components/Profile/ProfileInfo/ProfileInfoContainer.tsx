@@ -1,42 +1,59 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
-import Preloader from "../../common/Preloader/Preloader";
-import {ProfileType} from "../../../types/types";
+import Preloader from '../../common/Preloader/Preloader';
+import { ProfileType } from '../../../types/types';
 
-import ProfileInfo from "./ProfileInfo";
+import ProfileInfo from './ProfileInfo';
 
 type PropsType = {
-    profile: ProfileType,
-    status: string,
-    updateStatus: (status: string) => void,
-    isOwner: boolean,
-    savePhoto: (file: File) => void,
-    saveProfile: (profile: ProfileType) => Promise<any>,
-}
+  profile: ProfileType;
+  status: string;
+  updateStatus: (status: string) => void;
+  isOwner: boolean;
+  savePhoto: (file: File) => void;
+  saveProfile: (profile: ProfileType) => Promise<any>;
+};
 
-const ProfileInfoContainer: React.FC<PropsType> = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
+const ProfileInfoContainer: React.FC<PropsType> = ({
+  profile,
+  status,
+  updateStatus,
+  isOwner,
+  savePhoto,
+  saveProfile,
+}) => {
+  const [editMode, setEditMode] = useState(false);
 
-    let [editMode, setEditMode] = useState(false);
+  if (!profile) return <Preloader />;
 
-    if (!profile) return <Preloader />
+  const onMainPhotoSelected = (e: ChangeEvent<HTMLInputElement>): void => {
+    if (e.target.files && e.target.files.length) savePhoto(e.target.files[0]);
+  };
 
-    const onMainPhotoSelected = (e: ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files && e.target.files.length) savePhoto(e.target.files[0])
+  const onSubmit = (formData: ProfileType): void => {
+    try {
+      saveProfile(formData).then(() => {
+        setEditMode(false);
+      });
+    } catch (err) {
+      throw new Error(err as string);
     }
+  };
 
-    const onSubmit = (formData: ProfileType) => {
-        try {
-            saveProfile(formData).then(() => {
-                setEditMode(false);
-            })
-        } catch (err) {
-            return err
-        }
-    }
+  const goToEditMode = (): void => setEditMode(true);
 
-    const goToEditMode = () => setEditMode(true)
-
-    return <ProfileInfo profile={profile} status={status} updateStatus={updateStatus} isOwner={isOwner} editMode={editMode} onMainPhotoSelected={onMainPhotoSelected} onSubmit={onSubmit} goToEditMode={goToEditMode} />
-}
+  return (
+    <ProfileInfo
+      editMode={editMode}
+      goToEditMode={goToEditMode}
+      isOwner={isOwner}
+      onMainPhotoSelected={onMainPhotoSelected}
+      onSubmit={onSubmit}
+      profile={profile}
+      status={status}
+      updateStatus={updateStatus}
+    />
+  );
+};
 
 export default ProfileInfoContainer;

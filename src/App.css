@@ -21,7 +21,6 @@
   height: 100%;
 }
 
-
 /*.app-wrapper-content {*/
 /*  background-color: #ebe9ef;*/
 /*  height: 100%;*/
@@ -56,7 +55,8 @@
   font-weight: 500;
 }
 
-.main-btn, .action-btn {
+.main-btn,
+.action-btn {
   border: 1px solid #1890ff;
   color: #ebe9ef;
   background-color: #1890ff;

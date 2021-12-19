@@ -1,39 +1,40 @@
 .header {
-    position: fixed;
-    width: 100%;
-    z-index: 2;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .wrapper-header {
-    padding: 0 150px;
+  padding: 0 150px;
 }
 
 .img-header {
-    margin-top: 10px;
-    opacity: 0.95;
-    height: 45px;
+  margin-top: 10px;
+  opacity: 0.95;
+  height: 45px;
 }
 
 .wrapper-login {
-    float: right;
-    color: #ebe9ef;
-    margin-top: -3px;
+  float: right;
+  color: #ebe9ef;
+  margin-top: -3px;
 }
 
-.item-login,.logout-btn {
-    color: #ebe9ef;
-    text-decoration: unset;
-    font-size: 16px;
-    font-weight: 500;
+.item-login,
+.logout-btn {
+  color: #ebe9ef;
+  text-decoration: unset;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .logout-btn {
-    background-color: unset;
-    border: none;
-    cursor: pointer;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
 }
 
 .avatar {
-    margin-right: 10px;
-    background-color: #1890ff;
+  margin-right: 10px;
+  background-color: #1890ff;
 }

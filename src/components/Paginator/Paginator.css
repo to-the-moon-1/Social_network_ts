@@ -1,38 +1,38 @@
 .page-number {
-    background-color: #fff;
-    padding: 10px 15px;
-    margin: 5px;
-    font-size: 14px;
-    border: none;
-    border-radius: 3px;
-    font-weight: 500;
-    cursor: pointer;
+  background-color: #fff;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .selected-page {
-    background-color: #1890ff;
-    color: #ebe9ef;
+  background-color: #1890ff;
+  color: #ebe9ef;
 }
 
 .item {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .item-pagination {
-    display: inline;
+  display: inline;
 }
 
 .big-btn.nav-btn {
-    border: 2px solid #1890ff;
-    background-color: unset;
-    color: #1890ff;
-    width: 200px;
+  border: 2px solid #1890ff;
+  background-color: unset;
+  color: #1890ff;
+  width: 200px;
 }
 
 .prev-btn {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .next-btn {
-    margin-left: 10px;
+  margin-left: 10px;
 }

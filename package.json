@@ -34,8 +34,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "test:update": "npm test -- -u",
+    "test:watch": "npm test -- --watchAll --verbose",
+    "test:coverage": "npm test -- --bail --coverage --watchAll",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint:styles": "stylelint --syntax css src/**/*.css",
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:styles:fix": "npm run lint:styles -- --fix",
+    "format": "prettier \"src/**/*.{js,jsx,yml,yaml,ts,tsx,md,graphql,mdx}\" --write",
+    "format:styles": "prettier \"src/**/*.css\" --parser css --write"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +66,35 @@
   },
   "devDependencies": {
     "@types/uuid": "8.3.1",
-    "gh-pages": "3.1.0"
+    "gh-pages": "3.1.0",
+    "@typescript-eslint/eslint-plugin": "5.0.0",
+    "@typescript-eslint/parser": "5.0.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-config-airbnb-typescript": "16.1.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-config-react-app": "5.2.1",
+    "eslint-config-standard": "14.1.1",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-flowtype": "3.13.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jest": "23.20.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.20.6",
+    "eslint-plugin-react-hooks": "1.7.0",
+    "eslint-plugin-standard": "4.0.1",
+    "eslint": "7.11.0",
+    "husky": "3.1.0",
+    "lint-staged": "9.5.0",
+    "prettier": "2.5.1",
+    "stylelint": "12.0.1",
+    "stylelint-config-prettier": "8.0.2",
+    "stylelint-config-recommended": "3.0.0",
+    "stylelint-config-standard": "19.0.0",
+    "stylelint-order": "3.1.1",
+    "stylelint-prettier": "1.1.2"
   }
 }
