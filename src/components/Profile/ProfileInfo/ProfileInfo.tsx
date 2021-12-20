@@ -34,7 +34,10 @@ const ProfileInfo: React.FC<PropsType> = ({
       {profile.photos.large != null ? (
         <img alt="user" className="img-profile" src={profile.photos.large} />
       ) : (
-        <Avatar className="img-profile" icon={<UserOutlined className="icon icon-profile" />} />
+        <Avatar
+          className="avatar img-profile"
+          icon={<UserOutlined className="icon icon-profile" />}
+        />
       )}
       {isOwner && (
         <button className="big-btn main-btn">

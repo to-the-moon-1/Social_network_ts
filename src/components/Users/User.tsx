@@ -19,7 +19,7 @@ const User: React.FC<PropsType> = ({ user, followingInProgress, unfollow, follow
         {user.photos.small != null ? (
           <img alt="user" className="img-user" src={user.photos.small} />
         ) : (
-          <Avatar className="avatar-user" icon={<UserOutlined className="icon icon-user" />} />
+          <Avatar className="avatar img-user" icon={<UserOutlined className="icon icon-user" />} />
         )}
       </NavLink>
     </Col>

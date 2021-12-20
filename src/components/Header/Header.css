@@ -9,23 +9,23 @@
 }
 
 .img-header {
+  height: 45px;
   margin-top: 10px;
   opacity: 0.95;
-  height: 45px;
 }
 
 .wrapper-login {
-  float: right;
   color: #ebe9ef;
+  float: right;
   margin-top: -3px;
 }
 
 .item-login,
 .logout-btn {
   color: #ebe9ef;
-  text-decoration: unset;
   font-size: 16px;
   font-weight: 500;
+  text-decoration: unset;
 }
 
 .logout-btn {
@@ -36,5 +36,4 @@
 
 .avatar {
   margin-right: 10px;
-  background-color: #1890ff;
 }

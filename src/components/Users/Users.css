@@ -1,37 +1,37 @@
 .wrapper-user {
-  border: 1px solid #fff;
   background-color: #fff;
-  padding: 15px 25px;
+  border: 1px solid #fff;
   border-radius: 3px;
   margin-bottom: 17px;
+  padding: 15px 25px;
 }
 
 .search-btn.big-btn {
-  width: 234px;
   margin-right: 0;
   margin-top: 0;
+  width: 234px;
 }
 
 .middle-btn {
-  letter-spacing: 1px;
-  cursor: pointer;
-  width: 398px;
-  height: 40px;
-  text-align: center;
   border-radius: 3px;
+  cursor: pointer;
   font-size: 16px;
   font-weight: 500;
+  height: 40px;
+  letter-spacing: 1px;
   margin-top: 25px;
+  text-align: center;
+  width: 398px;
 }
 
 .action-btn {
   width: 100%;
 }
 
-.avatar-user {
-  width: 90px;
+.img-user {
+  border-radius: 50%;
   height: 90px;
-  background-color: #1890ff;
+  width: 90px;
 }
 
 .icon-user {
@@ -39,25 +39,19 @@
   padding-top: 22px;
 }
 
-.img-user {
-  border-radius: 50%;
-  width: 90px;
-  height: 90px;
-}
-
 .info-user {
+  margin: auto 0;
   padding-left: 15px;
   vertical-align: middle;
-  margin: auto 0;
 }
 
 .input-user {
-  font-size: 16px;
-  padding: 8px 15px;
-  margin-right: 10px;
-  width: 39%;
-  border-radius: 3px;
   border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-right: 10px;
+  padding: 8px 15px;
+  width: 39%;
 }
 
 .form-user {

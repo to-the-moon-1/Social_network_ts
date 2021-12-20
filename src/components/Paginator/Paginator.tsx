@@ -30,16 +30,16 @@ const Paginator: React.FC<PropsType> = ({
       </button>
     )}
     {pages
-      .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
-      .map(p => {
-        const onNewPage = (): void => onPageChanged(p);
+      .filter(page => page >= leftPortionPageNumber && page <= rightPortionPageNumber)
+      .map(page => {
+        const onNewPage = (): void => onPageChanged(page);
         return (
           <span
-            key={p}
-            className={currentPage === p ? 'page-number selected-page' : 'page-number'}
+            key={page}
+            className={currentPage === page ? 'page-number selected-page' : 'page-number'}
             onClick={onNewPage}
           >
-            {p}
+            {page}
           </span>
         );
       })}

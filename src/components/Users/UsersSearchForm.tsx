@@ -10,7 +10,6 @@ const usersSearchFormValidate = (): Record<string, any> => {
 };
 
 type PropsType = {
-  // onFilterChanged: (filter: FilterType) => void,
   submit: (
     values: FormProps,
     { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void },

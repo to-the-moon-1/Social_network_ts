@@ -43,14 +43,15 @@ const UsersPage: React.FC<UsersPagePropsType> = () => {
 
   useEffect(() => {
     const parsed = queryString.parse(history.location.search.substr(1)) as QueryParamsType;
+    const { page, term, friend } = parsed;
 
     let actualPage = currentPage;
     let actualFilter = filter;
 
-    if (parsed.page) actualPage = Number(parsed.page);
-    if (parsed.term) actualFilter = { ...actualFilter, term: parsed.term };
+    if (page) actualPage = Number(page);
+    if (term) actualFilter = { ...actualFilter, term };
 
-    switch (parsed.friend) {
+    switch (friend) {
       case 'null':
         actualFilter = { ...actualFilter, friend: null };
         break;
@@ -99,10 +100,8 @@ const UsersPage: React.FC<UsersPagePropsType> = () => {
     values: FormProps,
     { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void },
   ): void => {
-    const filters: FilterType = {
-      term: values.term,
-      friend: values.friend === 'null' ? null : values.friend === 'true',
-    };
+    const { term, friend } = values;
+    const filters: FilterType = { term, friend: friend === 'null' ? null : friend === 'true' };
 
     onFilterChanged(filters);
     setSubmitting(false);

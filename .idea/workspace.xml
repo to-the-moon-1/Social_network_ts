@@ -2,25 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0820c7c-28c3-46d0-af26-398f854a6d2b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/auth-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/auth-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/profile-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/profile-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Music/Music.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Music/Music.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/News/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News/News.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Paginator/PaginatorContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Paginator/PaginatorContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/withAuthRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/withSuspense.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withSuspense.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/ChatContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/chat-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/chat-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Paginator/Paginator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Paginator/Paginator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Paginator/Paginator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Paginator/Paginator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/ChatPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/Message.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +84,7 @@
       <recent name="E:\Дизайн\Front\New\React\it-kamasutra\01-first-project\src\components\Header" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint:fix">
+  <component name="RunManager" selected="npm.lint:styles:fix">
     <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -111,6 +115,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint:styles:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:styles:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -121,23 +135,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="tsc" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="tsc" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint:styles:fix" />
         <item itemvalue="npm.lint:fix" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.format:styles" />
         <item itemvalue="npm.format" />
-        <item itemvalue="npm.tsc" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +237,8 @@
       <workItem from="1639853707054" duration="7735000" />
       <workItem from="1639866443956" duration="10192000" />
       <workItem from="1639881368919" duration="2982000" />
-      <workItem from="1639941705075" duration="10357000" />
+      <workItem from="1639941705075" duration="10989000" />
+      <workItem from="1639957670909" duration="3813000" />
     </task>
     <servers />
   </component>

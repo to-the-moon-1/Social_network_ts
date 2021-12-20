@@ -27,9 +27,6 @@ const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileCo
 const ChatPageContainer = React.lazy(() => import('./pages/Chat/ChatContainer'));
 
 type MapPropsType = ReturnType<typeof mapStateToProps>;
-// type DispatchPropsType = {
-//     initializeApp: () => void
-// }
 
 const SuspensedDialogs = withSuspense(DialogsContainer);
 const SuspensedProfile = withSuspense(ProfileContainer);

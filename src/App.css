@@ -1,104 +1,102 @@
-/*body {*/
-/*  background-color: #1a1a22;*/
-/*  font-family: Roboto;*/
-/*  font-size: 18px;*/
-/*  letter-spacing: 1px;*/
-/*}*/
-
 .app-wrapper {
   margin: 0 auto;
   width: 1200px;
 }
 
-/*!!!*/
 .wrapper-content {
-  padding: 94px 200px;
   min-height: 100vh;
+  padding: 94px 200px;
 }
 
-/*!!!*/
 .menu {
   height: 100%;
 }
 
-/*.app-wrapper-content {*/
-/*  background-color: #ebe9ef;*/
-/*  height: 100%;*/
-/*  width: 75%;*/
-/*  box-sizing: border-box;*/
-/*  float: left;*/
-/*  padding: 60px 50px;*/
-/*  margin-left: 304px;*/
-/*  margin-top: 75px;*/
-/*}*/
-
 .content-page {
   padding: 0 24px;
-  /*min-height: 100vh;*/
+}
+
+.avatar {
+  background-color: #1890ff;
 }
 
 .icon {
-  text-align: center;
   font-weight: 300;
+  text-align: center;
 }
 
 .big-btn {
-  letter-spacing: 1px;
-  margin-right: 11px;
-  cursor: pointer;
-  width: 398px;
-  height: 40px;
-  text-align: center;
-  margin-top: 10px;
   border-radius: 3px;
+  cursor: pointer;
   font-size: 16px;
   font-weight: 500;
+  height: 40px;
+  letter-spacing: 1px;
+  margin-right: 11px;
+  margin-top: 10px;
+  text-align: center;
+  width: 398px;
 }
 
 .main-btn,
 .action-btn {
+  background-color: #1890ff;
   border: 1px solid #1890ff;
   color: #ebe9ef;
-  background-color: #1890ff;
   cursor: pointer;
   height: 40px;
-  /*width: 100%;*/
 }
 
 .input {
-  font-size: 16px;
-  padding: 8px 15px;
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 3px;
   border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 8px 15px;
+  width: 100%;
 }
 
 .textarea {
-  width: 100%;
-  min-height: 127px;
-  max-height: 127px;
-  border-radius: 3px;
   border: 1px solid #d3d4d7;
-  margin-top: 25px;
-  margin-bottom: 5px;
+  border-radius: 3px;
   font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  max-height: 127px;
+  min-height: 127px;
   padding: 8px 15px;
+  width: 100%;
 }
 
 .checkbox {
+  border-radius: 3px;
+  height: 20px;
   margin-top: 6px;
   width: 20px;
-  height: 20px;
-  border-radius: 3px;
 }
 
 .form-summary-error {
-  border: 1px solid red;
-  padding: 5px;
-  color: red;
-  margin-top: 10px;
+  border: 1px solid #f00;
+  color: #f00;
   margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+::-webkit-scrollbar {
+  border-radius: 3px;
+  width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1890ff;
+  border: 1px solid #1890ff;
+  border-radius: 3px;
 }
 
 * {

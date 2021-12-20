@@ -17,8 +17,8 @@
 
 .img-message {
   border-radius: 50%;
-  width: 60px;
   height: 60px;
+  width: 60px;
 }
 
 .icon-message {
@@ -31,22 +31,22 @@
 }
 
 .user-name {
-  text-decoration: unset;
   color: rgba(0, 0, 0, 0.85);
-  line-height: 18px;
-  font-weight: 700;
-  opacity: 0.7;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 18px;
+  opacity: 0.7;
+  text-decoration: unset;
+  text-transform: uppercase;
 }
 
 .text-message {
-  width: 100%;
-  word-break: break-all;
+  font-size: 15px;
   line-height: 25px;
   margin-top: 3px;
-  font-size: 15px;
+  width: 100%;
+  word-break: break-all;
 }
 
 .main-btn {
@@ -54,29 +54,13 @@
 }
 
 .textarea {
-  width: 100%;
-  min-height: 127px;
-  max-height: 127px;
-  border-radius: 3px;
   border: 1px solid #d3d4d7;
+  border-radius: 3px;
+  font-size: 16px;
   margin-bottom: 5px;
   margin-top: 40px;
-  font-size: 16px;
+  max-height: 127px;
+  min-height: 127px;
   padding: 8px 15px;
-}
-
-::-webkit-scrollbar {
-  width: 0.6em;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #fff;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #1890ff;
-  border: 1px solid #1890ff;
-  border-radius: 3px;
+  width: 100%;
 }

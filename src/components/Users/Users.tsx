@@ -10,7 +10,6 @@ import UsersSearchForm from './UsersSearchForm';
 type PropsType = {
   currentPage: number;
   onPageChanged: (pageNumber: number) => void;
-  // onFilterChanged: (filter: FilterType) => void,
   filter: FilterType;
   submit: (
     values: FormProps,

@@ -1,15 +1,15 @@
 .item-post {
   border: 2px solid #1890ff;
   border-radius: 3px;
-  margin-right: 32px;
   margin-bottom: 17px;
+  margin-right: 32px;
   padding: 20px 25px;
 }
 
 .img-user-post {
   border-radius: 50%;
-  width: 60px;
   height: 60px;
+  width: 60px;
 }
 
 .wrapper-post {
@@ -17,34 +17,34 @@
 }
 
 .wrapper-text-post {
-  width: 100%;
-  word-break: break-all;
+  font-size: 15px;
   line-height: 25px;
   margin-top: 3px;
-  font-size: 15px;
+  width: 100%;
+  word-break: break-all;
 }
 
 .name-user-post {
-  line-height: 18px;
+  font-size: 18px;
   font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 18px;
   opacity: 0.7;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 18px;
 }
 
 .count {
-  line-height: 18px;
+  font-size: 15px;
   font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 18px;
   opacity: 0.7;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 15px;
 }
 
 .aboutMe {
-  font-style: italic;
   font-size: 14px;
+  font-style: italic;
 }
 
 .activity-post {
@@ -59,7 +59,7 @@
 
 .like,
 .repost {
+  color: #1890ff;
   font-weight: 500;
   letter-spacing: 1px;
-  color: #1890ff;
 }
