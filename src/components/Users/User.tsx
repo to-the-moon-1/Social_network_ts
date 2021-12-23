@@ -12,50 +12,47 @@ type PropsType = {
   follow: (userId: number) => void;
 };
 
-const User: React.FC<PropsType> = ({ user, followingInProgress, unfollow, follow }) => (
-  <Row key={user.id} className="wrapper-user">
-    <Col span={2}>
-      <NavLink to={`/profile/${user.id}`}>
-        {user.photos.small != null ? (
-          <img alt="user" className="img-user" src={user.photos.small} />
+const User: React.FC<PropsType> = ({ user, followingInProgress, unfollow, follow }) => {
+  const followingUser = followingInProgress.some(id => id === user.id);
+  const unfollowUser = (): void => unfollow(user.id);
+  const followUser = (): void => follow(user.id);
+
+  return (
+    <Row key={user.id} className="wrapper-user">
+      <Col span={2}>
+        <NavLink to={`/profile/${user.id}`}>
+          {user.photos.small != null ? (
+            <img alt="user" className="img-user" src={user.photos.small} />
+          ) : (
+            <Avatar
+              className="avatar img-user"
+              icon={<UserOutlined className="icon icon-user" />}
+            />
+          )}
+        </NavLink>
+      </Col>
+      <Col className="info-user" span={18}>
+        <span>
+          <div className="name-user">{user.name}</div>
+        </span>
+        <span>
+          <div className="location-user">location.country</div>
+          <div className="location-user">location.city</div>
+        </span>
+      </Col>
+      <Col span={4}>
+        {user.followed ? (
+          <button className="middle-btn action-btn" disabled={followingUser} onClick={unfollowUser}>
+            Unfollow
+          </button>
         ) : (
-          <Avatar className="avatar img-user" icon={<UserOutlined className="icon icon-user" />} />
+          <button className="middle-btn action-btn" disabled={followingUser} onClick={followUser}>
+            Follow
+          </button>
         )}
-      </NavLink>
-    </Col>
-    <Col className="info-user" span={18}>
-      <span>
-        <div className="name-user">{user.name}</div>
-      </span>
-      <span>
-        <div className="location-user">location.country</div>
-        <div className="location-user">location.city</div>
-      </span>
-    </Col>
-    <Col span={4}>
-      {user.followed ? (
-        <button
-          className="middle-btn action-btn"
-          disabled={followingInProgress.some(id => id === user.id)}
-          onClick={() => {
-            unfollow(user.id);
-          }}
-        >
-          Unfollow
-        </button>
-      ) : (
-        <button
-          className="middle-btn action-btn"
-          disabled={followingInProgress.some(id => id === user.id)}
-          onClick={() => {
-            follow(user.id);
-          }}
-        >
-          Follow
-        </button>
-      )}
-    </Col>
-  </Row>
-);
+      </Col>
+    </Row>
+  );
+};
 
 export default User;

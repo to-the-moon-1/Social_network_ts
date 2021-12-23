@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { FilterType } from '../../redux/users-reducer';
+import { FilterType } from '../../redux/users/users-reducer';
 import { UserType } from '../../types/types';
-import { FormProps } from './UsersContainer';
-import PaginatorContainer from '../Paginator/PaginatorContainer';
+import { FormProps } from '../../containers/UsersContainer';
+import PaginatorContainer from '../../containers/PaginatorContainer';
 import User from './User';
 import UsersSearchForm from './UsersSearchForm';
 
-type PropsType = {
+type UsersType = {
   currentPage: number;
   onPageChanged: (pageNumber: number) => void;
   filter: FilterType;
@@ -21,7 +21,7 @@ type PropsType = {
   follow: (userId: number) => void;
 };
 
-const Users: React.FC<PropsType> = ({
+const Users: React.FC<UsersType> = ({
   currentPage,
   filter,
   follow,
@@ -33,13 +33,13 @@ const Users: React.FC<PropsType> = ({
 }) => (
   <div>
     <UsersSearchForm filter={filter} submit={submit} />
-    {users.map(u => (
+    {users.map(user => (
       <User
-        key={u.id}
+        key={user.id}
         follow={follow}
         followingInProgress={followingInProgress}
         unfollow={unfollow}
-        user={u}
+        user={user}
       />
     ))}
     <PaginatorContainer currentPage={currentPage} onPageChanged={onPageChanged} />

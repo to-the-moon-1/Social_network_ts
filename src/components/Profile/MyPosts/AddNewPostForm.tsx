@@ -1,10 +1,10 @@
 import React from 'react';
 import { Field, InjectedFormProps, reduxForm } from 'redux-form';
 
-import { FieldValidatorType, required } from '../../../utils/validators/validators';
+import { FieldValidatorType, required } from '../../../utils/validators';
 import Textarea from '../../common/FormsControls/Textarea';
 
-import { AddPostFormValuesType } from './MyPostsContainer';
+import { AddPostFormValuesType } from '../../../containers/Profile/MyPostsContainer';
 
 type PropsType = {
   maxLength100: FieldValidatorType;

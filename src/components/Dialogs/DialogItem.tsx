@@ -2,14 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Col, Row } from 'antd';
 
-type PropsType = {
+type DialogItemType = {
   id: number;
   name: string;
   src: string;
   messageText: string;
 };
 
-const DialogItem: React.FC<PropsType> = ({ id, src, name, messageText }) => {
+const DialogItem: React.FC<DialogItemType> = ({ id, src, name, messageText }) => {
   const path = `/dialogs/${id}`;
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { WrappedFieldMetaProps } from 'redux-form';
 
-import './FormsControl.css';
+import '../../../styles/FormsControl.css';
 
 export type FormControlPropsType = {
   meta: WrappedFieldMetaProps;

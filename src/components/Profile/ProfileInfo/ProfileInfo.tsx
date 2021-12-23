@@ -4,7 +4,7 @@ import { UserOutlined } from '@ant-design/icons';
 
 import { ProfileType } from '../../../types/types';
 
-import ProfileStatusWithHooks from './ProfileStatusWithHooks';
+import ProfileStatus from './ProfileStatus';
 import ProfileDataFormReduxForm from './ProfileDataForm';
 import ProfileData from './ProfileData';
 
@@ -17,12 +17,21 @@ type PropsType = {
   onMainPhotoSelected: (e: ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (formData: ProfileType) => void;
   goToEditMode: () => void;
+  activateEditModeStatus: () => void;
+  deactivateEditModeStatus: () => void;
+  editModeStatus: boolean;
+  onStatusChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  newStatus: string;
 };
 
 const ProfileInfo: React.FC<PropsType> = ({
+  activateEditModeStatus,
+  deactivateEditModeStatus,
+  editModeStatus,
+  onStatusChange,
+  newStatus,
   profile,
   status,
-  updateStatus,
   isOwner,
   editMode,
   onMainPhotoSelected,
@@ -53,8 +62,15 @@ const ProfileInfo: React.FC<PropsType> = ({
     </Col>
     <Col className="wrapper-profile-info" span={14}>
       <div className="name-profile">{profile.fullName}</div>
-      <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
-      <hr style={{ opacity: 0.5 }} />
+      <ProfileStatus
+        activateEditModeStatus={activateEditModeStatus}
+        deactivateEditModeStatus={deactivateEditModeStatus}
+        editModeStatus={editModeStatus}
+        newStatus={newStatus}
+        onStatusChange={onStatusChange}
+        status={status}
+      />
+      <hr className="hr-profile" />
       {editMode ? (
         <ProfileDataFormReduxForm initialValues={profile} onSubmit={onSubmit} profile={profile} />
       ) : (

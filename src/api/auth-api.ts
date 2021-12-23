@@ -1,5 +1,8 @@
 import { instance, APIResponseType, ResultCodeForCaptcha, ResultCodesEnum } from './api';
 
+const authMePath = 'auth/me';
+const authLoginPath = 'auth/login';
+
 type MeResponseDataType = {
   id: number;
   email: string;
@@ -11,20 +14,18 @@ type LoginResponseDataType = {
 };
 
 const authAPI = {
-  me() {
-    return instance.get<APIResponseType<MeResponseDataType>>('auth/me').then(res => res.data);
-  },
+  me: () => instance.get<APIResponseType<MeResponseDataType>>(authMePath).then(res => res.data),
+
   login(email: string, password: string, rememberMe = false, captcha: null | string = null) {
     return instance
       .post<APIResponseType<LoginResponseDataType, ResultCodesEnum | ResultCodeForCaptcha>>(
-      'auth/login',
+      authLoginPath,
       { email, password, rememberMe, captcha },
     )
       .then(res => res.data);
   },
-  logout() {
-    return instance.delete('auth/login');
-  },
+
+  logout: () => instance.delete(authLoginPath),
 };
 
 export default authAPI;

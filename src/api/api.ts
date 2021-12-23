@@ -1,11 +1,14 @@
 import axios from 'axios';
 import { UserType } from '../types/types';
 
+const baseURL = 'https://social-network.samuraijs.com/api/1.0/';
+const key = 'b8134bfa-c729-4d4d-8e15-028e7e08c9cd';
+
 export const instance = axios.create({
   withCredentials: true,
-  baseURL: 'https://social-network.samuraijs.com/api/1.0/',
+  baseURL,
   headers: {
-    'API-KEY': 'b8134bfa-c729-4d4d-8e15-028e7e08c9cd',
+    'API-KEY': key,
   },
 });
 
@@ -24,8 +27,8 @@ export type GetItemsType = {
   error: string | null;
 };
 
-export type APIResponseType<D = Record<string, unknown>, RC = ResultCodesEnum> = {
-  data: D;
+export type APIResponseType<Data = Record<string, unknown>, RC = ResultCodesEnum> = {
+  data: Data;
   messages: Array<string>;
   resultCode: RC;
 };

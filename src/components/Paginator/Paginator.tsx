@@ -1,6 +1,6 @@
 import React from 'react';
 
-type PropsType = {
+type PaginatorType = {
   pages: number[];
   currentPage: number;
   onPageChanged: (pageNumber: number) => void;
@@ -12,7 +12,7 @@ type PropsType = {
   nextPortionNumber: () => void;
 };
 
-const Paginator: React.FC<PropsType> = ({
+const Paginator: React.FC<PaginatorType> = ({
   pages,
   currentPage,
   onPageChanged,
@@ -22,16 +22,19 @@ const Paginator: React.FC<PropsType> = ({
   nextPortionNumber,
   leftPortionPageNumber,
   rightPortionPageNumber,
-}): JSX.Element => (
-  <div className="item-pagination">
-    {portionNumber > 1 && (
-      <button className="big-btn nav-btn prev-btn" onClick={prevPortionNumber}>
-        Prev
-      </button>
-    )}
-    {pages
-      .filter(page => page >= leftPortionPageNumber && page <= rightPortionPageNumber)
-      .map(page => {
+}): JSX.Element => {
+  const portionPageNumber = pages.filter(
+    page => page >= leftPortionPageNumber && page <= rightPortionPageNumber,
+  );
+
+  return (
+    <div className="item-pagination">
+      {portionNumber > 1 && (
+        <button className="big-btn nav-btn prev-btn" onClick={prevPortionNumber}>
+          Prev
+        </button>
+      )}
+      {portionPageNumber.map(page => {
         const onNewPage = (): void => onPageChanged(page);
         return (
           <span
@@ -43,12 +46,13 @@ const Paginator: React.FC<PropsType> = ({
           </span>
         );
       })}
-    {portionCount > portionNumber && (
-      <button className="big-btn nav-btn next-btn" onClick={nextPortionNumber}>
-        Next
-      </button>
-    )}
-  </div>
-);
+      {portionCount > portionNumber && (
+        <button className="big-btn nav-btn next-btn" onClick={nextPortionNumber}>
+          Next
+        </button>
+      )}
+    </div>
+  );
+};
 
 export default Paginator;

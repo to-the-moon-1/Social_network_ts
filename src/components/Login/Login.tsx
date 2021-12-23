@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LoginFormValuesType } from './LoginContainer';
+import { LoginFormValuesType } from '../../containers/LoginContainer';
 import LoginReduxForm from './LoginForm';
 
 type PropTypes = {

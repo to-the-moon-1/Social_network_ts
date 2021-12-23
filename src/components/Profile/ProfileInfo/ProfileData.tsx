@@ -4,11 +4,11 @@ import { ContactsType, ProfileType } from '../../../types/types';
 
 import Contacts from './ProfileContact';
 
-type ProfileDataPropsType = {
+type ProfileDataType = {
   profile: ProfileType;
 };
 
-const ProfileData: React.FC<ProfileDataPropsType> = ({
+const ProfileData: React.FC<ProfileDataType> = ({
   profile: { aboutMe, lookingForAJob, lookingForAJobDescription, contacts },
 }) => (
   <div className="wrapper-profile-form">
@@ -31,15 +31,10 @@ const ProfileData: React.FC<ProfileDataPropsType> = ({
     )}
     <div className="wrapper-field">
       <b>Contacts:</b>{' '}
-      {Object.keys(contacts).map(key => {
-        return (
-          <Contacts
-            key={key}
-            contactTitle={key}
-            contactValue={contacts[key as keyof ContactsType]}
-          />
-        );
-      })}
+      {Object.keys(contacts).map(key => (
+        <Contacts key={key} contactTitle={key} contactValue={contacts[key as keyof ContactsType]} />
+      ))}
+      ;
     </div>
   </div>
 );

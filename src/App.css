@@ -1,3 +1,8 @@
+:root {
+  --blue: #1890ff;
+  --red: #f00;
+}
+
 .app-wrapper {
   margin: 0 auto;
   width: 1200px;
@@ -17,7 +22,7 @@
 }
 
 .avatar {
-  background-color: #1890ff;
+  background-color: var(--blue);
 }
 
 .icon {
@@ -40,8 +45,8 @@
 
 .main-btn,
 .action-btn {
-  background-color: #1890ff;
-  border: 1px solid #1890ff;
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
   color: #ebe9ef;
   cursor: pointer;
   height: 40px;
@@ -76,8 +81,8 @@
 }
 
 .form-summary-error {
-  border: 1px solid #f00;
-  color: #f00;
+  border: 1px solid var(--red);
+  color: var(--red);
   margin-bottom: 10px;
   margin-top: 10px;
   padding: 5px;
@@ -94,8 +99,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1890ff;
-  border: 1px solid #1890ff;
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
   border-radius: 3px;
 }
 

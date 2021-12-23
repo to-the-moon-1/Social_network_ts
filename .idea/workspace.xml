@@ -2,29 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0820c7c-28c3-46d0-af26-398f854a6d2b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/Constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Routers/Routers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/64d1662ace40218c9802b7e1ee3ea45b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Black_Panther.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Doctor_Strange.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/IronMan-EndgameProfile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Tony.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/hulk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/photo_2021-05-05_03-14-51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/photo_2021-05-05_03-14-51f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/photo_2021-05-05_03-14-51ff.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/stiv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/thor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tonyMain.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tonyMain2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tonyMain3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tonyMain5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Paginator/Paginator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Paginator/Paginator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/auth-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/auth-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/chat-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/chat-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/profile-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/profile-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/security-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/security-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/users-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/users-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/AddMessageForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/AddMessageForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Dialogs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/DialogsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LoginContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Music/Music.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Music/Music.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/News/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News/News.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Paginator/Paginator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Paginator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Paginator/Paginator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Paginator/Paginator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Paginator/PaginatorContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/PaginatorContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/AddNewPostForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/AddNewPostForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Profile/MyPostsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Profile/MyPosts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileContact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileDataForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileDataForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Profile/ProfileInfo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfoContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Profile/ProfileInfoContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Users.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/UsersContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/ChatPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chat/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/Message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/FormsControl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControls/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControls/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControls/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControls/Textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withAuthRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withSuspense.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withSuspense.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/AddMessageForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/AddMessageForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ChatContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/Message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/Messages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/app-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/app-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth/auth-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth/auth-selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/chat-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/chat-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogs-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sidebar-reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users/users-selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-thunk.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validators/validators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,14 +157,14 @@
       <recent name="E:\Programming\first-ts-app-2\src\components\common\FormsControls" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Programming\first-ts-app-2\src" />
-      <recent name="E:\Дизайн\Front\New\React\it-kamasutra\01-first-project\src\components\Dialogs\DialogItem" />
-      <recent name="E:\Дизайн\Front\New\React\it-kamasutra\01-first-project\src\components\Profile" />
-      <recent name="E:\Дизайн\Front\New\React\it-kamasutra\01-first-project\src\components\Profile\MyPosts" />
-      <recent name="E:\Дизайн\Front\New\React\it-kamasutra\01-first-project\src\components\Header" />
+      <recent name="E:\Programming\first-ts-app-2\src\redux" />
+      <recent name="E:\Programming\first-ts-app-2\src\styles" />
+      <recent name="E:\Programming\first-ts-app-2\src\containers" />
+      <recent name="E:\Programming\first-ts-app-2\src\styles\Profile" />
+      <recent name="E:\Programming\first-ts-app-2\src\components\Profile\MyPosts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint:styles:fix">
+  <component name="RunManager" selected="npm.start">
     <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -95,11 +175,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="format:styles" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="format:styles" />
+        <script value="lint" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -137,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.lint:styles:fix" />
-        <item itemvalue="npm.lint:fix" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.format:styles" />
+        <item itemvalue="npm.lint:styles:fix" />
         <item itemvalue="npm.format" />
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.lint:fix" />
       </list>
     </recent_temporary>
   </component>
@@ -239,6 +319,12 @@
       <workItem from="1639881368919" duration="2982000" />
       <workItem from="1639941705075" duration="10989000" />
       <workItem from="1639957670909" duration="3813000" />
+      <workItem from="1639961842237" duration="120000" />
+      <workItem from="1640093629523" duration="10949000" />
+      <workItem from="1640108123384" duration="12745000" />
+      <workItem from="1640124856109" duration="4292000" />
+      <workItem from="1640193816023" duration="6553000" />
+      <workItem from="1640208217673" duration="14747000" />
     </task>
     <servers />
   </component>

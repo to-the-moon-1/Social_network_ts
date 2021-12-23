@@ -4,45 +4,48 @@ import { v1 } from 'uuid';
 import { BaseThunkType, InferActionsTypes } from './redux-store';
 import { chatAPI, ChatMessageAPIType, StatusType } from '../api/chat-api';
 
-type ChatMessageType = ChatMessageAPIType & { id: string };
+const MESSAGES_RECEIVED = 'MESSAGES_RECEIVED';
+const STATUS_CHANGED = 'STATUS_CHANGED';
 
-const initialState = {
-  messages: [] as ChatMessageType[],
-  status: 'pending' as StatusType,
+// type ChatMessageType = ChatMessageAPIType & { id: string };
+
+export type InitialStateType = {
+  messages: ChatMessageAPIType[];
+  status: StatusType;
 };
 
-export type InitialStateType = typeof initialState;
+const initialState: InitialStateType = {
+  messages: [],
+  status: 'pending',
+};
+
+type MessagesReceivedType = { type: typeof MESSAGES_RECEIVED; messages: ChatMessageAPIType[] };
+type StatusChangedType = { type: typeof STATUS_CHANGED; status: StatusType };
+
+type ActionChatType = MessagesReceivedType | StatusChangedType;
 
 export const actions = {
-  messagesReceived: (messages: ChatMessageAPIType[]) =>
-    ({
-      type: 'MESSAGES_RECEIVED',
-      payload: { messages },
-    } as const),
-  statusChanged: (status: StatusType) =>
-    ({
-      type: 'STATUS_CHANGED',
-      payload: { status },
-    } as const),
+  messagesReceived: (messages: ChatMessageAPIType[]) => ({ type: MESSAGES_RECEIVED, messages }),
+  statusChanged: (status: StatusType) => ({ type: STATUS_CHANGED, status }),
 };
 
 type ActionsTypes = InferActionsTypes<typeof actions>;
 type ThunkType = BaseThunkType<ActionsTypes | FormAction>;
 
-const chatReducer = (action: ActionsTypes, state = initialState): InitialStateType => {
+const chatReducer = (action: ActionChatType, state = initialState): InitialStateType => {
   switch (action.type) {
-    case 'MESSAGES_RECEIVED':
+    case MESSAGES_RECEIVED:
       return {
         ...state,
         messages: [
           ...state.messages,
-          ...action.payload.messages.map(m => ({ ...m, id: v1() })),
-        ].filter((m, index, array) => index >= array.length - 100),
+          ...action.messages.map((message: ChatMessageAPIType) => ({ ...message, id: v1() })),
+        ].filter((message, index, array) => index >= array.length - 100),
       };
-    case 'STATUS_CHANGED':
+    case STATUS_CHANGED:
       return {
         ...state,
-        status: action.payload.status,
+        status: action.status,
       };
     default: {
       return state;
