@@ -1,0 +1,49 @@
+.wrapper-login-form {
+  height: 100%;
+  width: 60%;
+}
+
+.main-head {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  line-height: 40px;
+  margin-bottom: 23px;
+  margin-top: 0;
+  opacity: 0.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.input-small {
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 8px 15px;
+  width: 200px;
+}
+
+.img-captcha {
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.checkbox.checkbox-login {
+  margin-right: 8px;
+}
+
+.wrapper-checkbox {
+  align-items: center;
+  display: inline-flex;
+  margin-top: 5px;
+}
+
+.remember-me {
+  margin-bottom: 5px;
+}
+
+.hr {
+  margin-bottom: 15px;
+}

@@ -1,29 +1,43 @@
-import React from 'react';
-import {Redirect} from "react-router-dom";
-import {connect} from "react-redux";
-import {AppStateType} from "../redux/redux-store";
+import React, { FC } from 'react';
+import { Redirect } from 'react-router-dom';
+import { connect, ConnectedComponent } from 'react-redux';
+import { AppStateType } from '../redux/redux-store';
 
-let mapStateToPropsForRedirect = (state: AppStateType) => ({
-    isAuth: state.auth.isAuth
-});
+const mapStateToPropsForRedirect = (state: {
+  authReducer: { isAuth: boolean };
+}): { isAuth: boolean } => ({ isAuth: state.authReducer.isAuth });
 
 type MapPropsType = {
-    isAuth: boolean,
-}
+  isAuth: boolean;
+};
 
-type DispatchPropsType = {
-}
+type UnknownObj = Record<string, any>;
 
-export function withAuthRedirect<WCP>(WrappedComponent: React.ComponentType<WCP>) {
-    const RedirectComponent: React.FC<MapPropsType & DispatchPropsType> = (props) => {
-        let {isAuth, ...restProps} = props
+type DispatchPropsType = UnknownObj;
+type PropsType = MapPropsType & DispatchPropsType;
 
-        if (!isAuth) return <Redirect to={'/login'}/>
+const withAuthRedirect = <WCP extends UnknownObj>(
+  WrappedComponent: React.ComponentType<WCP>,
+): ConnectedComponent<FC<PropsType>, Omit<PropsType, string> & WCP> => {
+  const RedirectComponent: React.FC<PropsType> = props => {
+    const { isAuth, ...restProps } = props;
 
-        return <WrappedComponent {...restProps as WCP} />
-    }
+    if (!isAuth) return <Redirect to="/login" />;
 
-    let ConnectedAuthRedirectComponent = connect<MapPropsType, DispatchPropsType, WCP, AppStateType>(mapStateToPropsForRedirect, {}) (RedirectComponent);
+    return <WrappedComponent {...(restProps as WCP)} />;
+  };
 
-    return ConnectedAuthRedirectComponent;
-}
+  const connectedAuthRedirectComponent = connect<
+  MapPropsType,
+  DispatchPropsType,
+  WCP,
+  AppStateType
+  >(
+    mapStateToPropsForRedirect,
+    {},
+  )(RedirectComponent);
+
+  return connectedAuthRedirectComponent;
+};
+
+export default withAuthRedirect;

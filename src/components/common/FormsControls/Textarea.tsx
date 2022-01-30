@@ -1,9 +1,15 @@
-import React from "react";
-import {WrappedFieldProps} from "redux-form";
+import React from 'react';
+import { WrappedFieldProps } from 'redux-form';
 
-import {FormControl} from "./FormsControl";
+import { FormControl } from './FormsControl';
 
-export const Textarea: React.FC<WrappedFieldProps> = (props) => {
-    const {input, meta, ...restProps} = props;
-    return <FormControl {...props}><textarea className="textarea-error" {...input} {...restProps} /></FormControl>
-}
+const Textarea: React.FC<WrappedFieldProps> = props => {
+  const { input, ...restProps } = props;
+  return (
+    <FormControl {...props}>
+      <textarea className="textarea-error" {...input} {...restProps} />
+    </FormControl>
+  );
+};
+
+export default Textarea;

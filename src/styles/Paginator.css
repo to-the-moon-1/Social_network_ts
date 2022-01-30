@@ -1,0 +1,38 @@
+.page-number {
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 5px;
+  padding: 10px 15px;
+}
+
+.selected-page {
+  background-color: #1890ff;
+  color: #ebe9ef;
+}
+
+.item {
+  margin-top: 15px;
+}
+
+.item-pagination {
+  display: inline;
+}
+
+.big-btn.nav-btn {
+  background-color: unset;
+  border: 2px solid #1890ff;
+  color: #1890ff;
+  width: 200px;
+}
+
+.prev-btn {
+  margin-right: 10px;
+}
+
+.next-btn {
+  margin-left: 10px;
+}

@@ -1,11 +1,9 @@
 import React from 'react';
 
-type PropsType = {
-    message: string,
-}
+type MessageType = {
+  message: string;
+};
 
-const Message: React.FC<PropsType> = ({message}) => (
-    <div className="text">{message}</div>
-)
+const Message: React.FC<MessageType> = ({ message }) => <div className="text">{message}</div>;
 
 export default Message;
